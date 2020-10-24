@@ -15,10 +15,10 @@
 	To understand "security", "privacy", etc.?
 	When is this used?
 	\item Commercial intentions?:\\
-	Is the intention to use this commercially? 
-	The API specifically states that this should not be used commercially. 
+	Is the intention to use this commercially?
+	The API specifically states that this should not be used commercially.
 	If commercial aspects are of interest, we need to have it approved.
-	
+
 
 \end{itemize}
 
@@ -38,18 +38,24 @@
 	\emph{Questions}: \\ Why does it not save them?
 	How many tweets can/should we get?
 	\item scrape.py:\\
-	Generates a user-agent to access the different 
+	Generates a user-agent to access the different
 	articles used for generating the \textit{train\_data.json} file.\\
-	\emph{Questions}: \\ 
-	Why are there so many functions for scraping? 
+	\emph{Questions}: \\
+	Why are there so many functions for scraping?
 	Is it because they differ in format and need different preprocessing to read?
 	\item pushshift\_aggs.py:\\
-	Used to scrape the frequency of query-terms 
-	\textit{"privacy", "security", "trust"} for the last 3 years on the subreddits. 
+	Used to scrape the frequency of query-terms
+	\textit{"privacy", "security", "trust"} for the last 3 years on the subreddits.
 	It seems like the \textit{frequency} keyword establishes the sampling rate.
 	This is used to plot how many comments uses these query words over 3 years.
-	\emph{Questions}: \\ 
+	\emph{Questions}: \\
 	Is this actually the frequency?
+	\item pushshift\_API.py:\\
+	Used to scrape threads from two subreddits.
+	(homeautomation, smarthome) based on three
+	query terms (privacy, security, trust). If
+	a comment (not post?) matches one of these
+	terms then the whole thread is downloaded.
 \end{itemize}
 
 \end{document}
