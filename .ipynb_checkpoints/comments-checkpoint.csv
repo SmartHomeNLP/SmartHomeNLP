@@ -1,0 +1,157 @@
+author,body,created_utc,id,link_id,parent_id,permalink,score,subreddit
+fastlerner,"I get what you're saying about the expectation of privacy in a front yard that faces the street, but I don't think it's as black and white as it seems.
+
+I've gone back and looked at older ring videos and noticed that I can hear my TV quietly in the background of recordings of the neighbors cat crossing my porch, and my living room is on the other side of my kitchen from the front door.
+
+This tells me that it's very likely that the camera could pick up a loud conversation in my kitchen, which is definitely somewhere I would expect to have some privacy.  And it could definitely record me having a conversation with a friend which was quiet enough that I would not expect a neighbor to hear (much less a police officer sitting in an office miles away) as we entered or exited the door or sat on the porch with a large front yard between us and the street.
+
+It's for this reason that I don't share my footage.  Sooner or later though, it's likely to bite some unsuspecting person who does.
+
+If Ring would just open up the ability to access the camera feed locally, I'd turn off everything cloud related except doorbell notifications.",1574279821,f85otox,t3_dz3d1m,t1_f851k1j,/r/smarthome/comments/dz3d1m/amazon_confirms_police_can_keep_ring_doorbell/f85otox/,1,smarthome
+NormanKnight,"This should be easily doable in any competent hub. Unfortunately, not all are competent.
+
+You're in the awkward situation where you've bought the things you need to control before deciding on what's going to control them. This is like buying tires and then looking for a car that can use them. You might not end up with what really works best for you this way.
+
+As far as a specific recommendation, anyone who recommends anything to you without knowing your technical skills, willingness to tinker, preferred computing platform, and tolerance for privacy invasion is doing you a disservice.
+
+I hope you're using the hacked firmware for that otherwise crazily phoning home Wyze Cam.",1574271699,f85bg5r,t3_dz3tix,t3_dz3tix,/r/homeautomation/comments/dz3tix/specific_question_about_home_automation_hubs/f85bg5r/,1,homeautomation
+Dhkansas,"I go back and forth between wanting to really automate and just make things voice/remote/phone controlled. I know a lot of people recommend doing everything local for privacy, but I don't know enough about setting up a network and it's not a high priority for me to learn right now. I want to start small and basic and just add things here and there over the years. Switches/locks/sensors is probably where I will start. I did see that the nest cameras payment plan is getting ready to change so I'll probably look at getting one of those for each entrance point",1574211673,f83gny2,t3_dynr1h,t1_f83erfp,/r/homeautomation/comments/dynr1h/wherehow_to_start_small_with_room_to_grow_in_the/f83gny2/,1,homeautomation
+quarl0w,"The makers of the devices still have the responsibility to implement it. Google provided a avenue to allow local processing, but they can't take it forcefully. 
+
+I don't think many manufactures will take that leap and hand over control of their devices to Google. There is too much privacy concerns with Google knowing too much in many peoples minds. 
+
+Google is a company of great ideas. Sometimes they are good, sometimes not. Sometimes they actually see the light of day, sometimes not. Sometimes the implementation is poor, sometimes not. And the most Google thing of all is to have a good idea, that actually sees the light of day, and is implemented, only to be unceremoniously shut down later. This is all conjecture still. I/O was 6 months ago and nothing has happened on this front yet. No one has taken them up on the offer.",1574176084,f81s5bt,t3_dy4kjb,t1_f81r94v,/r/homeautomation/comments/dy4kjb/psa_to_people_looking_to_get_started_with/f81s5bt/,1,homeautomation
+NormanKnight,"Anyone who recommends anything to you without knowing your technical skills, willingness to tinker, preferred computing and phone platform, and tolerance for privacy invasion is doing you a disservice.",1574171713,f81m6ex,t3_dyjjoo,t3_dyjjoo,/r/homeautomation/comments/dyjjoo/upgrading_my_home_automation/f81m6ex/,1,homeautomation
+grooves12,"That's about where I sit looking at them, the only problem is for the non-techie crowd setup and usability seems to be the inverse of privacy. 
+
+The 2nd gen portals at least have a shutter control on them.",1574108414,f7zbvox,t3_dy6w8l,t1_f7zbkgj,/r/homeautomation/comments/dy6w8l/best_video_phone/f7zbvox/,1,homeautomation
+n3rding,"I wouldn't trust Mark Zuckerberg with a camera in my house, some of his practices are dubious at best and his definition of privacy is laughable. Just my opinion, although I do think it looks like a nice piece of kit.. I would get a Google equivalent, but I'm just in too deep already and trust them a little more.. Amazon is probably the safest in this regard as they are not selling advertising to 3rd parties..",1574108286,f7zbkgj,t3_dy6w8l,t1_f7z9m72,/r/homeautomation/comments/dy6w8l/best_video_phone/f7zbkgj/,1,homeautomation
+Wobbley,"Thanks for the info, I can see the privacy concern, I didn't necessarily mean it had google assistant built in. As skeptical as I am to bigger companies the Samsung Smarthings v3 Hub actually looks good feature wise, and pretty cheap.",1574069972,f7xqhju,t3_dy058y,t1_f7xqaii,/r/homeautomation/comments/dy058y/somfy_blinds_first_home_automation_project/f7xqhju/,1,homeautomation
+No-Coast-Punk,Look into Mycroft instead of Alexa if you are concerned with privacy.,1573916109,f7nvq9n,t3_dx0t6w,t3_dx0t6w,/r/homeautomation/comments/dx0t6w/setting_up_new_smarthome_best_way_for/f7nvq9n/,1,homeautomation
+magicfab,"I am in the same boat. I've decided to focus on Free open source software solutions and standards-based devices, with an emphasis on privacy. Our first few weeks have been exploring the hardware available, then focusing on Zigbee / Zwave devices and the big brands (Hue, Lutron, etc.). I am also exploring voice control, trying to avoid Alexa, Google and Apple while doing everything on LAN ie. without depending on Cloud and in general, the Internet - except for initial configuration and updates.
+
+After a few weeks experimenting with different solutions, our focus is on OpenHAB while keeping an eye on [Mozilla's WebThings Gateway](https://iot.mozilla.org/gateway/) project which has a lot of activity and improves by the day.
+
+IMO having a demo ready is important. OpenHAB does a great job on that.
+
+I've found the least path of resistance is approaching existing alarm companies (they know cabling, have customers, are always looking to compete with others), and residential/commercial construction and renovation businesses. You may also want to decide who will be your customers, perhaps not deal with home/business property owners directly.
+
+I' ve been asked to make a hardware prototype of such a free open source-based solution so that's what we're doing. So far that means an rPi + Zwave/zigbee USB stick, high endurance CD and some devices to show. We' re considering another higher-end device (mini PC + SSD), and testing both approaches. Having a cheap rPI + SD card seems to be more efefctive even keeping in minf SD replacements every once in a while.
+
+What geographic area are you in ? Maybe we can exchange more information, experience and + as we go on.
+
+Good luck! and thanks for sharing your questions, it encouraged me to write about our small, slow but steady progress.",1573825574,f7ktp2q,t3_dwl8ls,t3_dwl8ls,/r/homeautomation/comments/dwl8ls/automation_business_integrator_services/f7ktp2q/,1,homeautomation
+iheartsubmariner,Hmm. I was thinking of putting my security cameras in a separate VLAN on the home network. The building intercom would be on the automation network.,1574349967,f887mg7,t3_dzgieb,t1_f8847cx,/r/homeautomation/comments/dzgieb/what_is_the_correct_way_to_wire_a_house_for_home/f887mg7/,1,homeautomation
+just_an_amber,"It can be. Especially as more devices come to market in the future (90W was ratified in 2018). If you want to use any security cameras in your HA, that's where I would see the PoE advantage immediately.",1574348271,f8847cx,t3_dzgieb,t1_f883l70,/r/homeautomation/comments/dzgieb/what_is_the_correct_way_to_wire_a_house_for_home/f8847cx/,1,homeautomation
+imbored454,"Actual break-ins and actual intruders?
+Get an actual security system... It doesn't seem worth it to reinvent the wheel if you're concerned about safety.",1574341789,f87szd8,t3_dzg5vf,t3_dzg5vf,/r/smarthome/comments/dzg5vf/alexa_routines_for_scaring_off_intruders_when/f87szd8/,1,smarthome
+mobiliakas1,Don't forget your home security system. You can save a lot by using cheap wired sensors and integrating them into your home automation system. For example DSC Power system with Envisalink.,1574332598,f87h5xv,t3_dzgieb,t3_dzgieb,/r/homeautomation/comments/dzgieb/what_is_the_correct_way_to_wire_a_house_for_home/f87h5xv/,1,homeautomation
+igazijo,"What do you mean by ""you have a security door that will not allow access to the hallway?"" Pics would help. 
+
+What kind of door is it? What kinda door closer does it have? 
+
+I ask because you could use the same kinda mechanism as commercial doors: automatic door closer and maglock. They require some kind of controller, and in your case a custom one which can be set up for whatever automation and integrated with Alexa and/or Google Assistant.",1574305092,f86rfaw,t3_dz8gvl,t3_dz8gvl,/r/smarthome/comments/dz8gvl/smart_door_releasecloser/f86rfaw/,1,smarthome
+tomgabriele,Do you have any security cameras yet? It might be worthwhile picking that out in case your favorite only supports one or the other assistant.,1574268504,f8568qc,t3_dz4d7a,t3_dz4d7a,/r/homeautomation/comments/dz4d7a/help_chosing_assistant/f8568qc/,1,homeautomation
+HonestEditor,"&gt; What I'm thinking of using it for is:
+&gt; 
+&gt; 
+&gt; 
+&gt;     Security Alerts (Doors are unlocked, windows open, security bar up, etc)
+&gt; 
+&gt;     Calendar Display
+&gt; 
+&gt;     Waze ""time to destination""
+&gt; 
+&gt;     Displaying the Pollen and Flu index for our city
+&gt; 
+&gt;     Displaying if my dog has been walked / if she's gotten her medication
+&gt; 
+&gt;     Displaying camera feeds that detect motion (if we're in bed).
+&gt; 
+&gt;     Display the forecast
+&gt; 
+&gt;     Display other Alerts - like if we need to switch the laundry, if batteries are low and need to be replaced, if my NVR's disk space is too high.
+
+This is exactly the types of things I used a mounted touchscreen for.  True, I could do it with a standard monitor, but a touchscreen allows me to swipe over and get detailed weather maps when I want them, or detailed status on all my systems. 
+
+I frequently don't carry my phone with me in the house, and I sure don't want to have to keep up with remotes (oh, where did it get put down now?).",1574265213,f850xaf,t3_dz2lx4,t1_f84wsnl,/r/homeautomation/comments/dz2lx4/tablet_survey_results/f850xaf/,1,homeautomation
+Stratotally,"Sure, things should be voice controlled, or be on an app on your phone. I get that.
+
+However: 
+
+* Tablets can cost less than a monitor/computer setup mounted on a wall.
+* Theres a built in camera, so it can turn on when motion is detected. OR use it as a clock, display photos, etc.
+* You don't have to bolt it to the wall, you could have a detachable mount or use magnets.
+* Bit of a stretch, but it also has a built-in battery if the power goes out. If you run your hub / wifi on an UPS like I do, it can help control/monitor some gadgets that are battery powered.
+
+What I'm thinking of using it for is:
+
+* Security Alerts (Doors are unlocked, windows open, security bar up, etc)
+* Calendar Display
+* Waze ""time to destination""
+* Displaying the Pollen and Flu index for our city
+* Displaying if my dog has been walked / if she's gotten her medication
+* Displaying camera feeds that detect motion (if we're in bed).
+* Display the forecast
+* Display other Alerts - like if we need to switch the laundry, if batteries are low and need to be replaced, if my NVR's disk space is too high. 
+
+A lot of these things are in my HomeAssistant app on the front page, but I don't have the app open all the time. I could send alerts through push notifications, but sometimes I need extra nudges to follow up on them.",1574262570,f84wsnl,t3_dz2lx4,t1_f84v10k,/r/homeautomation/comments/dz2lx4/tablet_survey_results/f84wsnl/,1,homeautomation
+ShowMeTheMonee,"Hi, 
+
+Can you say more about what you actually want to achieve from home automation and a smart home? You mention security and the roborock - are you also thinking about heating? Lighting? controlling appliances? 
+
+How do you want to control the appliances? With voice? with physical switches? with tablets or a remote to control scenes? 
+
+Are you an apple household? Android? Amazon? indifferent? 
+
+Would you prefer a solution which is all set up, or would you like to be able to customise it yourself? Are you ok with some programming or you want to avoid that? 
+
+Given that home automation can sometimes have some strange behaviours, it might be recommended to keep your home security separate from your home automation system. 
+
+Many people use some kind of z-wave hub (smartthings, homekit, vera etc) plus different modules to control different activities. 
+
+If you can give a bit more information, people can give some more tailored advice.",1574254801,f84mrgt,t3_dz1fq2,t3_dz1fq2,/r/homeautomation/comments/dz1fq2/planning_for_smart_home_and_automatation/f84mrgt/,1,homeautomation
+paybito,"We are looking at a future where every household will be run by AI butlers, an advanced and updated version of the present-day Alexa, Google Assistant. But the problem with this system is that the data stored in the cloud is susceptible to hacking, which puts your personal information at risk. [Read to know more about it](https://www.hashcashconsultants.com/media/blockchain-data-security-ai-voice-assistants-smart-homes/).",1574248421,f84h80n,t3_dyfsbs,t3_dyfsbs,/r/homeautomation/comments/dyfsbs/installed_a_nest_3rd_gen_ecobee_smart_w_voice/f84h80n/,1,homeautomation
+NationalDonut,"Completely missed it! Thank you!
+
+You don't trust those ceramics in the bathroom? I was thinking of adding a small one for the morning winter.",1574303696,f86pcc9,t3_dzcd5k,t1_f86p2lu,/r/homeautomation/comments/dzcd5k/automation_for_heaters/f86pcc9/,1,homeautomation
+mt379,Id still be up. Kinda OCD. I check my locks more than once before I go to bed. I wouldn't trust the automatic locks.,1574211330,f83g2jo,t3_dykpor,t1_f83fvas,/r/smarthome/comments/dykpor/i_dont_know_why_im_automating/f83g2jo/,1,smarthome
+RagnarDannes,"Google home devices don't support 2 way video calls.
+
+And I totally agree with the statement about Facebook.  I just don't trust them at all, heck they just got caught activating the camera on iOS devices while a users scroll the activity feed.",1574110159,f7zg1sn,t3_dy6w8l,t1_f7zbkgj,/r/homeautomation/comments/dy6w8l/best_video_phone/f7zg1sn/,1,homeautomation
+RagnarDannes,"Google Home hub doesn't have a camera which eliminates it outright. 
+
+Facebook Portal is geared to low-tech users.  That is if you trust having Facebook put a camera in your home.
+
+Amazon Alexa Show's have video chat through Skype, but I think that's going to be more difficult for grandma to setup.",1574104274,f7z2dgn,t3_dy6w8l,t3_dy6w8l,/r/homeautomation/comments/dy6w8l/best_video_phone/f7z2dgn/,1,homeautomation
+swoopy_puppy,"If you value your safety, stay away from cheap leds, I once bought a package of cheap Chinese mr16 led bulbs that were 10 times cheaper than Phillips branded ones. Luckily I installed them in my office where there is no carpet.
+
+The first one went out with some fizzy noise about a month after installing it. Second and third ones died one week later about two days apart, but the fourth one died next weekend with a very loud bang and flash, lots of sparks and smoke, that alone could have started a fire very easily had it been near a curtain, shelf or sofa. After that incident I removed the other six remaining led bulbs, went to Home Depot and bought 10 Phillips mr16 led bulbs to replace them. It has been 3 years since that incident and my Phillips light bulbs work perfectly. Lesson learned! 
+
+After that incident with the Chinese cheap leds I got scarred and to this day I don’t leave home with any led light on, particularly those above sofas, beds or carpet, contrary to old lightbulbs or cfl they don’t simply flash, they tend to explode during a surge and can easily spark a fire, are you sure you want to trust your home to your cheap leds??",1574071026,f7xr5tu,t3_dvfb7d,t3_dvfb7d,/r/smarthome/comments/dvfb7d/what_is_the_difference_between_smart_bulbs_like/f7xr5tu/,1,smarthome
+ebikr,"I decided on a Vera controller/hub a few years ago- it was low cost, easy to program with an active community and many 3rd party apps and a good iOS app (HomeWave.) To be honest I haven’t kept up with more recent products or integrations with Google, ifttt, etc as I don’t trust always-listening devices, don’t need voice integration, and the Vera gives me the logic I need. Good luck as you move forward.",1574069669,f7xqaii,t3_dy058y,t3_dy058y,/r/homeautomation/comments/dy058y/somfy_blinds_first_home_automation_project/f7xqaii/,1,homeautomation
+jefbenet,"My motto is: “if it sits still, it gets hardlined”
+
+Wireless is great for mobile devices like phones, tablets, and laptops. Anything mission critical like security and especially life safety I’ll never trust to wireless.
+
+All that said, I couldn’t agree more OP, the availability of affordable cameras and home automation with POE is woefully overlooked. I have cheated and used the POE to 5V micro-usb splitters before to provide power to a rPi on the end of a POE run before, so there are some tricks but that’s not always an option.
+
+Edit: and yes I’m aware of the pi’s poe hat option, learned of it right *AFTER* I ordered the splitter",1574050172,f7x9pog,t3_dxmpfd,t1_f7v9tn6,/r/homeautomation/comments/dxmpfd/why_are_poe_devices_so_few_and_far_between_with/f7x9pog/,5,homeautomation
+kigmatzomat,"Join the homeseer forum. Lots of useful things there. Links to videos and the like.
+
+The main thing is learning the event system. The UI is fairly straightforward but the notion of events re inherently complicated.
+
+It uses an If (a becomes b and c becomes d) or (e becomes f and g becomes h) then set device I to status J.
+
+It's all managed by dropdown menus so its fast...once you get used to thinking through your needs. 
+
+There are times you will want to add a counter and a timer so you can set up an event after 3 things happen in 15 minutes. It's not hard to add timers or counters, it's hard to get the logic right.
+
+Just start small. Make a few scenarios and run them for a week. Then add a bit more as you figure out what you forgot.
+
+I will say with a thermostat you should be sure to define summer, winter and that comfortable window where no hvac is needed. 
+
+Don't run your heat set point up against your cool set point. Most hvac systems overrun the target temp and have 2-3F of swing around their target temp.
+
+Add some kind of override that if the temp ever goes over 85 that heat turns off or if the temp is below 60 that the AC turns off. Trust me, screw up some trigger events and push your house to 90F and you will be happy for those overrides.",1574040338,f7wwzui,t3_dx2fb1,t1_f7urp80,/r/homeautomation/comments/dx2fb1/i_need_a_z_wave_smart_thermostat_recommendation/f7wwzui/,1,homeautomation
+I_Arman,"There are a number of switches that will do what you're looking for; you just replace a standard light switch, and all the bulbs on the circuit are controlled. While there are Wi-Fi switches, I suggest a hub with Zigbee or Z-Wave; I don't trust Wi-Fi to run a smart network of more than a couple devices.",1574033857,f7wj8f0,t3_dxuk5q,t3_dxuk5q,/r/homeautomation/comments/dxuk5q/light_controller_without_smart_bulbs/f7wj8f0/,1,homeautomation
