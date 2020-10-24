@@ -1,10 +1,13 @@
 import praw
 
-reddit = praw.Reddit(client_id='V65osQ-P4aMWBQ',
-                     client_secret='IeKPqv2TRgpEY2RGo8wf9Uv2iz0',
-                     username='mgmtmor',
-                     password='sHreddit',
-                     user_agent='prawscraper')
+## updated to be Victor's Reddit account.
+user_agent = ("Smart Home v1.0 by /u/NLPinfiltrator")
+
+reddit = praw.Reddit(client_id='fQuRCESlv_7yOQ',
+                     client_secret='v6AjzytAKDgqjqyQNczapezXUjk',
+                     username='NLPinfiltrator',
+                     password='BestPass0701',
+                     user_agent=user_agent)
 
 subreddit = reddit.subreddit('smarthome')
 

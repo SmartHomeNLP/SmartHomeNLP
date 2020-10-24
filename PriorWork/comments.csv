@@ -37,6 +37,7 @@ veron1on1,"Thank you! I do agree.
 Have a best friend and want to have an enemy instead? Become roommates! 😂
 Might as well install the camera in the bathroom. Privacy should absolutely be respected and shared equally.",1603094666,g9azr5z,t3_jdwpou,t1_g9azeze,/r/homeautomation/comments/jdwpou/disable_ring_doorbell_temporarily/g9azr5z/,1,homeautomation
 meyewood40,"The ethics part of your post is 100% on point!!! I’m gonna go ahead and say that being roommates means they’re splitting every bill at the place so neither one really has power over the other. With that being said the roommate that has the ring doorbell and the access should either give access to the other or remove it entirely. In my honest humble opinion this could be considered a breach of privacy for the roommate without access, especially if it was installed without having at least discussing beforehand. To me it’s a bit sketchy and strange and I would have a serious problem with it. I would be going online and doing some intense and in depth research to find out how to either access it or disable it until the other roommate can come to an agreed upon resolution. And in all honesty I do believe that those things are still highly hackable and the way to do so is all over the net right now. Maybe hack in to it and change the password to it, that’ll get the other roommates attention real quick.",1603094277,g9azeze,t3_jdwpou,t1_g9ayqu5,/r/homeautomation/comments/jdwpou/disable_ring_doorbell_temporarily/g9azeze/,1,homeautomation
+<<<<<<< HEAD
 veron1on1,"Cover the camera with a hammera? 
 Do you have a bright, green or blue laser? Shine it into the camera and it will burn out the iris. Just joking. Don’t damage anything. See if your area has any privacy laws. Get the law quote and inform your roommate that you would either like the password or for him/her to get rid of it. 
 
@@ -144,6 +145,8 @@ Another would be if the service was owned by a hostile party - maybe they would 
 Maybe all they can see of you is your garage door, but other folks use them to watch pets, children etc.  so it's not a good idea to expose camera feeds (and passwords aren't enough).
 
 A good way to keep safe is to setup a separate, protected network for your IoT devices and block them from the internet - then there's much less risk.  That means you need IoT devices with local APIs / no cloud dependence and an automation system that can control them.  Often you'll want a trusted system that will also give you remote access.",1601861465,g7qt9hf,t3_j59t1h,t3_j59t1h,/r/homeautomation/comments/j59t1h/cheap_chinese_products_and_your_data/g7qt9hf/,1,homeautomation
+=======
+>>>>>>> 991aeafe164963406530d4192fd3c65a9fb651e8
 kigmatzomat,"You can do that with homeseer for sure. I am not sure about hubitat's camera support. In each case you would only use the homeseer or hubitat app. 
 
 Before you buy things, here is a primer on home automation (HA) tech:
@@ -223,6 +226,7 @@ pugz1ey,"Zwave over Wifi
 the batteries last longer. 
 
 Zwave uses a lower frequency radio .. which also means lower bandwidth, but who cares when it's basic commands that are getting broadcast. Then you also don't need to go down the rabbit hole of having a separate IoT WiFi network which is recommended for security.",1603389521,g9o4rng,t3_jg2xuz,t3_jg2xuz,/r/homeautomation/comments/jg2xuz/new_house_buying_a_yale_lock_wifi_or_zwave/g9o4rng/,1,homeautomation
+<<<<<<< HEAD
 kigmatzomat,"Here is my primer on HA tech
 
 Technologies: Zwave, zigbee and insteon are ""full stack"" automation solutions. What that means is that communication layer, enrollment, encryption, API and device attributes are baked in. Every smart switch uses the ""switch"" profile and the command for ""light on"" is always the same. Zwave and zigbee allow for new, novel commands when new device types hit the market. They are not IP/wifi-based (they have their own network technology) .
@@ -338,6 +342,8 @@ So I feel like your negatives against the lack of security of 802.11 is simply b
 
 For reference, I am a CCIE-Wireless and have a CWNE, I'd consider myself pretty well educated on networking and especially proficient in wireless technologies.",1603251716,g9iavyu,t3_jb393t,t1_g8w8ch6,/r/homeautomation/comments/jb393t/mega_reasons_to_avoid_wifi_products_thread/g9iavyu/,1,homeautomation
 Far_Industry_9259,Sorry about that. You're right tho. That's a security door and have a main door.,1603247152,g9i3oy9,t3_je8n1u,t1_g9ea7f9,/r/smarthome/comments/je8n1u/what_kinds_of_smart_lock_can_i_install_on_this/g9i3oy9/,1,smarthome
+=======
+>>>>>>> 991aeafe164963406530d4192fd3c65a9fb651e8
 uncle_tony123,"Shelly all the way for safety, sonoff for the price,
 I have done the whole electrics for a house in the UK with Shelly and we wired it all up as you would a normal house, and then the Shelly dimmers fit nice a snug in the back of the wall plates and it makes it all ""smart"" they are a great piece of kit!
 
@@ -390,6 +396,7 @@ So, is the worker installing the covers going to consult someone's circuit map a
 I had my electrician label breaker panels as they pulled the rough wiring. Even then, it wasn't perfect, but it's more accurate than when the electrician gets reminded the local inspector will check for breaker panel labels just before final inspection.
 
 If I had reason to remove a cover once, I might label it in case I had to do it again. But I'd still check the correct breaker has been turned off.",1603070751,g9a4zp6,t3_jds2gg,t3_jds2gg,/r/smarthome/comments/jds2gg/life_hacks_label_backs_of_switchoutlet_covers/g9a4zp6/,4,smarthome
+<<<<<<< HEAD
 TomahawkChopped,"&gt;August Locks? They work... 
 
 As a Google software engineer and someone who has been building internet applications and services professionally for 15 years.... I would never in my life trust any software I have not written myself to control access to my home. ... And i certainly wouldn't trust myself to write such code without errors.
@@ -511,3 +518,5 @@ Google is no better.Do you trust Google not to start charging a subscription fee
 
 So think about what you would really want out of a smart home, and then find the solution that will give you that. There's tons of solid solutions out there. I would recommend Samsung SmartThings over Homekit, Google Home and Alexa for example, but there are plenty of good alternatives.",1602136733,g832amo,t3_j72ub2,t3_j72ub2,/r/smarthome/comments/j72ub2/buying_a_house_at_the_end_of_the_month_looking_to/g832amo/,1,smarthome
 maz_net_au,"I barely trust google with the OS on my phone. I can't imagine willingly buying anything else that gives them more control over my life, information, or anything else.",1602129355,g82sugu,t3_j6stjw,t1_g80q7nl,/r/homeautomation/comments/j6stjw/tinkering_with_making_random_iot_devices_is_wifi/g82sugu/,1,homeautomation
+=======
+>>>>>>> 991aeafe164963406530d4192fd3c65a9fb651e8
