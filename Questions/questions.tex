@@ -10,33 +10,46 @@
 
 \section{Questions}
 \begin{itemize}
-	\item train\_data\_checkpoint.json:
+	\item train\_data\_checkpoint.json:\\
 	Trained on wikipedia and articles for what purpose?
 	To understand "security", "privacy", etc.?
 	When is this used?
+	\item Commercial intentions?:\\
+	Is the intention to use this commercially? 
+	The API specifically states that this should not be used commercially. 
+	If commercial aspects are of interest, we need to have it approved.
+	
 
 \end{itemize}
 
 \section{Notes}
 \begin{itemize}
-	\item Reddit API:
-	client ID: fQuRCESlv\_7yOQ
+	\item Reddit API:\\
+	client ID: fQuRCESlv\_7yOQ\\
 	client secret: v6AjzytAKDgqjqyQNczapezXUjk
 \end{itemize}
 
 \section{Overview}
 \begin{itemize}
-	\item reddit\_API.py:
+	\item reddit\_API.py:\\
 	Uses the Reddit API to gather top tweets
 	from the "smarthome" subreddit and comments.
-	Now set up to use Victor's account.
-	\emph{Questions}: Why does it not save them?
+	Now set up to use Victor's account.\\
+	\emph{Questions}: \\ Why does it not save them?
 	How many tweets can/should we get?
-	\item scrape.py:
+	\item scrape.py:\\
 	Generates a user-agent to access the different 
-	articles used for generating the \textit{train\_data.json} file.
-	\emph{Questions}: Why are there so many functions for scraping? 
+	articles used for generating the \textit{train\_data.json} file.\\
+	\emph{Questions}: \\ 
+	Why are there so many functions for scraping? 
 	Is it because they differ in format and need different preprocessing to read?
+	\item pushshift\_aggs.py:\\
+	Used to scrape the frequency of query-terms 
+	\textit{"privacy", "security", "trust"} for the last 3 years on the subreddits. 
+	It seems like the \textit{frequency} keyword establishes the sampling rate.
+	This is used to plot how many comments uses these query words over 3 years.
+	\emph{Questions}: \\ 
+	Is this actually the frequency?
 \end{itemize}
 
 \end{document}

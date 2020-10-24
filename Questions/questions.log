@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  24 OCT 2020 18:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  24 OCT 2020 19:24
 entering extended mode
 **c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/Questions/questions.tex
 (c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/Questions/questions.tex
@@ -81,31 +81,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 9.
+ [1
 
-Overfull \hbox (65.62746pt too wide) in paragraph at lines 22--25
-[]\OT1/cmr/m/n/10 Reddit API: client ID: fQuRCESlv[]7yOQ client se-cret: v6AjzytAKDgqjqyQNczapezXUjk 
- []
-
-
-Overfull \hbox (22.12727pt too wide) in paragraph at lines 29--35
-[]\OT1/cmr/m/n/10 reddit[]API.py: Uses the Red-dit API to gather top tweets from the "smarthome"
- []
-
-[1
-
-{C:/Users/Mikkel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\Questions\questions.aux) ) 
+{C:/Users/Mikkel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\Questions\questions.aux) ) 
 Here is how much of TeX's memory you used:
  1156 strings out of 480934
  18030 string characters out of 2899449
- 251862 words of memory out of 3000000
+ 252862 words of memory out of 3000000
  17062 multiletter control sequences out of 15000+200000
  536659 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,6n,25p,257b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Mikkel\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\Questions\questions.pdf (1 page, 66603 bytes).
+Output written on c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\Questions\questions.pdf (2 pages, 69562 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 34 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
