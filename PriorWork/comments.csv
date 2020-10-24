@@ -1,0 +1,170 @@
+author,body,created_utc,id,link_id,parent_id,permalink,score,subreddit
+Riffz,"Human rights atrocities, Tiamamen, Tibet, Hong Kong Democracy, intellectual property theft, hacking, privacy etc. The list is long, not to bring it up in a vacuum thread but “list of Chinese atrocities” is one search away.
+
+I would rather buy from North America and our allies than sell out for cheap botvacs that send live streams of my living room to the Corrupt Communist Party.",1603479794,g9sbz8m,t3_jgf5wn,t1_g9s67sk,/r/homeautomation/comments/jgf5wn/hold_up_we_now_have_a_subscription_plan_for_a/g9sbz8m/,1,homeautomation
+Tetsugaku-San,Spotify is 100% native on Sonos of you want it to be. The sound is great. Only reason I’m changing to 100% homepods is simplicity and privacy (getting rid of Alexa units I had that voice controlled the Sonos units),1603435271,g9qidqc,t3_jg6iir,t1_g9pahf1,/r/smarthome/comments/jg6iir/wifi_enable_speakers_that_would_let_me_play_music/g9qidqc/,1,smarthome
+koenvervloesem,"Yes, you can create a 100% offline smart home. For instance, install a home automation system that puts local control first, such as [Home Assistant](https://www.home-assistant.io/), and don't use any of its integrations with online services. Another interesting system, focusing on privacy, is [Candle](https://www.candlesmarthome.com/). For an even more DIY approach, I have written a book about creating a fully offline home automation system based on MQTT: [Control Your Home with Raspberry Pi](https://koen.vervloesem.eu/books/control-your-home-with-raspberry-pi/).
+
+For an offline voice assistant, I recommend [Rhasspy](https://rhasspy.readthedocs.io/en/latest/) (disclaimer: I'm a contributor). Note that this is more a voice assistant *toolkit* than a ready-to-use voice assistant. However, it has a very welcoming [community](https://community.rhasspy.org/).
+
+So in short, a 100% offline smart home is possible, but it's evidently not as user-friendly as existing cloud-based systems.",1603394331,g9ofjjw,t3_jg5i95,t3_jg5i95,/r/homeautomation/comments/jg5i95/is_creating_a_complete_smart_home_with_zero/g9ofjjw/,1,homeautomation
+Tetsugaku-San,Do you care about privacy? no? Eufy. Yes? Eve.,1603212118,g9g50y8,t3_jeotrs,t3_jeotrs,/r/smarthome/comments/jeotrs/which_security_cameras_to_get/g9g50y8/,1,smarthome
+APimpNamedAPimpNamed,"Oh cool, so when does the new ToS/privacy policy from ADT drop? Lots of valuable data locked up in people’s alarm system logs...",1603208542,g9fxmw6,t3_jed0qc,t1_g9ea8f4,/r/homeautomation/comments/jed0qc/google_discontinues_its_google_nest_secure_alarm/g9fxmw6/,1,homeautomation
+sickofdefaultsubs,"Budget considerations aside a FLIR based system with a person detection algorithm could help make it super easy and reliable for the basic use cases without having to actually detect faces specifically. 
+    
+For basic stuff like room lighting it would be pretty accurate and reliable and you could probably have reasonably low resolution cameras which feed a processing unit live and without the ability to record to balance privacy concerns.
+  
+A person algorithm may be able to differentiate between adult and child for some personalisation then augment with your phone or tile based solution for ultra personalisation.
+  
+P.S. for the most part you could do something like this with regular cameras rather than FLIR (i.e. person detection rather than facial rec) the benefit with FLIR though will be that it works in all light conditions and will probably be easier for the cameras to reliably detect people regardless of movement levels.",1603110307,g9bfbcp,t3_jdyilm,t3_jdyilm,/r/homeautomation/comments/jdyilm/idea_for_fully_automatic_lights/g9bfbcp/,1,homeautomation
+Nixellion,"Well, there are similar systems.
+
+If you're talking about carrying a 'tag' with you, like a phone, then you're basically describing bluethooth beacons. Each room would have a bluethooth 'host' device, there's even a project for raspberry pi for this. Room Assistant it's called I think. With Bluethooth, as any other radio device, you can see what devices are in range of the beacon and have signal strength (RSSI) value. From signal strength you can estimate the distance to the beacon. The bonus point is that walls drop the signal by a lot, so it's not hard to use it to detect when bluethooth device is in the room and how many of them are.
+
+I did play with similar approach using just 1 bluethooth 'host' and RSSI signal was reliable enough to detect whether I was in my room or not. The only problem I had was that at least with my particular usb bluethooth adapter when I tried to poll devices around like every 5-10 seconds I think it spammed too much, and bluetooth headphones started to disconnect frequently.
+
+But the point is, it works.
+
+Another option is using a camera with person detection. That's by far the best and most reliable way, and it's often used in cafes and other public places wherever you can see counters saying how many people are there, for example. The obvous downside is privacy concerns. Even if you can make sure that these cameras are secure someone could still hack them. And even if not - you will still need to convince other people you live (if any) about their security.
+
+If you're talking about a directional motion sensor, that's something I was thinking about myself. Should not be that hard to achieve in a DIY way at least. You could use dual distance sensors, for example, lidars or something.  The only problem is that there's no way to acquire initial state of room prescience on restart. So it will easily get out of sync, because youre not detecting people in the room, you're just detecting objects passing by the sensor. 
+
+And the most common approach is also quite effective - motion sensors. Cover each room with motion sensors, PIR, and logic is quite simple and old - if motion detected - instantly switch room to ""people in"". If no motion within 10-30 minutes - room is empty. It can only fail if you're sitting really still or sleeping. So those cases can be addressed individually. For my PC a made a script that each few seconds takes a picture from my web camera and runs face detection. If my face is there - i'm in the room and working on pc. 
+
+For beds you could use pressure sensors.",1603100402,g9b4md6,t3_jdyilm,t3_jdyilm,/r/homeautomation/comments/jdyilm/idea_for_fully_automatic_lights/g9b4md6/,1,homeautomation
+MaryBanastre,"Well, I never said roommate. :-) Unfortunately I don't think there are any privacy rules that apply.",1603095329,g9b0ben,t3_jdwpou,t1_g9ayqu5,/r/homeautomation/comments/jdwpou/disable_ring_doorbell_temporarily/g9b0ben/,1,homeautomation
+veron1on1,"Thank you! I do agree. 
+Have a best friend and want to have an enemy instead? Become roommates! 😂
+Might as well install the camera in the bathroom. Privacy should absolutely be respected and shared equally.",1603094666,g9azr5z,t3_jdwpou,t1_g9azeze,/r/homeautomation/comments/jdwpou/disable_ring_doorbell_temporarily/g9azr5z/,1,homeautomation
+meyewood40,"The ethics part of your post is 100% on point!!! I’m gonna go ahead and say that being roommates means they’re splitting every bill at the place so neither one really has power over the other. With that being said the roommate that has the ring doorbell and the access should either give access to the other or remove it entirely. In my honest humble opinion this could be considered a breach of privacy for the roommate without access, especially if it was installed without having at least discussing beforehand. To me it’s a bit sketchy and strange and I would have a serious problem with it. I would be going online and doing some intense and in depth research to find out how to either access it or disable it until the other roommate can come to an agreed upon resolution. And in all honesty I do believe that those things are still highly hackable and the way to do so is all over the net right now. Maybe hack in to it and change the password to it, that’ll get the other roommates attention real quick.",1603094277,g9azeze,t3_jdwpou,t1_g9ayqu5,/r/homeautomation/comments/jdwpou/disable_ring_doorbell_temporarily/g9azeze/,1,homeautomation
+kigmatzomat,"You can do that with homeseer for sure. I am not sure about hubitat's camera support. In each case you would only use the homeseer or hubitat app. 
+
+Before you buy things, here is a primer on home automation (HA) tech:
+
+Zwave, zigbee and insteon are ""full stack"" automation solutions. What that means is that communication layer, enrollment, encryption, API and device attributes are baked in. Every smart switch uses the ""switch"" profile and the command for ""light on"" is always the same. Zwave and zigbee allow for new, novel commands when new device types hit the market. They are not IP/wifi-based (they have their own network technology) .
+
+Zwave, zigbee, and insteon use mesh radio networks. Low power, so battery friendly, and the mesh let's them have decent range. However only mains-powered devices can act as relays. Zwave is 900Mhz (good signal penetration for power but frequency varies by country), zigbee is 2.4Ghz (which can conflict with bluetooth and wifi b). Insteon is 900Mhz and also has powerline signaling as well in a dual-path configuration that is great in concrete block/steel housing that eats RF.
+
+Compare them to wifi devices, which are wifi+tcp+ip+custom encryption+custom API+custom attributes. ""Wifi"" is just networking, there are several more components you need for device controls and they are very disparate. Even a ""standards"" based solution using MQTT as the API layer can have devices of the same type with radically different commands and attributes (lights on/off, power true/false, etc) or implement different encryption schemes. In zwave, zigbee, insteon the command for ""power on/off"" is clearly defined. Wifi also has security concerns as IoT devices have become prime targets for botnets and could come with malware or viruses.
+
+Yes, ZWave, Zigbee, Insteon require hubs/controllers. Guess what? So do the wifi devices! They have a doodad (wifi access point) that connects to a phone/tablet/cloud. Surprise! Those are computers running a program to be the brain! Want a less pleasant surprise? A lot of the times (like &gt;80% of the time) that computer requires some cloud computer to be online. If there's any internet problems or the people running that cloud computer shut it down, your stuff stops working. Even less pleasant, you may need multiple clouds, meaning there are 2 or 3 different ways your gear can turn into doorstops. E.g. Using Alexa to control a Tuya bulb. Amazon has to be reachable for the echo to work and then they have to have the connector to the Tuya/SmartLife cloud AND your bulb has to be logged into the Tuya cloud. If Amazon decides to stop supporting Tuya, it breaks. If Tuya decides to shut down their system, it breaks. If your internet is down, it breaks. If Amazon's internet is down, it breaks. If Tuya's internet is down, it breaks.
+
+I prefer zwave for a couple reasons. First, Zwave mandates compliance and security testing. A handful of devices with implementation flaws have slipped through over the last 15 years and then the compliance test is updated to prevent that from happening again. With Zigbee that's optional. I also hearken from the bad old days where companies abused zigbee' custom configuration option and made ALL commands custom (I believe Xiaomi is still bad about this as they don't follow the officials zigbee spec). Zwave allows manufacturer specific commands but only when an existing command isn't appropriate, and it is enforced. Lastly, zwave has more 110v devices (switches, plugs, power strips), locks, thermostats and smoke/co detectors. There are various reasons but short answer is most retailers require110v devices/smoke detectors/locks/thermostats to have UL/ETL certification which is expensive and most zigbee device manufacturers are going for low cost/low overhead.
+
+Zigbee is great if you want a lot of battery powered sensors on the cheap. The other thing it has a lot of is bulbs, due to Hue using the LightLink flavor of zigbee. It has been chosen by IKEA as their tech standard, which may be a plus. The last thing to remember for zigbee is that you need a Zigbee3 controller. Prior to Zigbee3 you either had a ZigbeeLL (lighting products) or a ZigbeeHA (locks, sensors, etc plus lights, but not the same commands as LL) and the two didn't talk. They still won't talk to each other, but Zigbee3 controllers will talk to both. Eventually all the old zigbee LL/HA devices will fade from the market but it will be a while.
+
+Insteon is sole source. Pretty gear, well made, all works together, but one supplier. I like options. But its like more Apple than Apple.
+
+Controllers come in cloud-based and local processing flavors. What this means is a local processing controller will work without an internet-hosted service. SmartThings, for instance, loses most automations when their service is unavailable and you can't control the devices at all when that happens as the phone app connects to the ST cloud. (They are changing some of that but also abandoning their old software APIs so lots of ST functions are going to break) a controller where all the logic runs in your house will keep doing its thing even if the internet goes down, let alone a specific web service.
+
+In the ""open box, start using it"" category, Homeseer, Hubitat and Apple Homekit are local systems. In the build-it-yourself category, HomeAssistant has the most vocal fan base followed by OpenHab. The other controllers I know of require some cloud services or they become either mindless zombies or doorstops. (Or are end-of-life and not worth buying right now, like Vera or alpha status like EzLo)
+
+Unless you are a tinkerer, I recommend using pre-built controllers. Home automation is complicated enough to get the automation logic working the way you want to also have to exert effort on getting the controller running.
+
+Controller wise, I use HomeSeer. They have been around for 20 years and make devices as well as controllers so they have a solid engineering core. It's a bit more expensive in some cases (like if you have 2 of each technology and don't standardize) but all HA is expensive so cheaping out on the brains seems stupid. Like ""hiring a teenager to drive your limo because you can pay them minimum wage"" stupid.
+
+I like HS because it is rock solid, worked out of the box, I have root access to the hardware so I can add other software if I want, and it meets my ""able to make backups and shift to other hardware"" requirement. They also have a deep product range, with cheap but powerful intro model based on a Pi3b and go up to x86 win10 appliances and can run on my hardware.
+
+Homeseer was my 3rd controller and I wanted something I could get up and running fast as I already had 3 dozen devices and a host of automations to recreate. Homeseer let me set up and migrate all the devices on a saturday and I got the automations figured out on sunday. Very high spousal approval factor (SAF). It plays nice with Alexa and Google.
+
+If you really have your eye on Zigbee, Hubitat is a good choice. The system has zigbee and zwave radios built in and it supports a large number of zigbee devices. Iirc, xioami devices are supported by 3rd party drivers. But the hardware has less cpu power so it can get overwhelmed by large installs or complex automations. It too works with Google and Alexa.
+
+Apple people will gravitate to homekit. Its not a bad choice but product selection is limited. Homekit is a special thing. Its a mix of wifi with custom APIs and bluetooth with custom APIs. Apple validates all of it so its solid and it is a local system, using an ipad or appletv as the hub. (I recommend the appletv just because you don't want to accidentally take your home controller on vacation or let its battery die.) But...its got apple fingerprints all over it but its dependent on 3rd party suppliers. Apple isn't great at having business partners so it is a little worrisome. Plus, you know, Apple walled garden.
+
+But it works with Siri. And it's about the only thing that does work with Siri officially. There is a kind of backdoor using an app called HomeBridge, which uses Homekit developer APIs to let you connect some other controller (pretty much anything I have mentioned above) to Homekit. It works, it seems reliable but....any iOS update can close that backdoor.",1603551244,g9wztkh,t3_jh595g,t3_jh595g,/r/homeautomation/comments/jh595g/new_home_setup/g9wztkh/,1,homeautomation
+Jwelvaert,The only thing that has that ability is [Home Assistant](https://www.home-assistant.io/). It is a lot of work to set up but is getting easier with each release. Has an IOS and Android app and has over 1700 integrations and has a helpful community. For cameras I'd recommend POE cameras. I'm using [Reolink](https://www.amazon.com/Reolink-Outdoor-Surveillance-Security-RLC-420-5MP/dp/B07FQ2T89L/ref=sr_1_6?dchild=1&amp;keywords=roelink+camera&amp;qid=1603530645&amp;sr=8-6) but there are several great options out there. [Here's](https://www.youtube.com/watch?v=xg3krwlX4jk&amp;t=13s) a video that compares a few.,1603530806,g9vrob0,t3_jh595g,t3_jh595g,/r/homeautomation/comments/jh595g/new_home_setup/g9vrob0/,1,homeautomation
+speeder2002,"There are multiple revisions of the gocontrol/nortec/linear/etc. 
+
+Gd00z-1 to -3 are the original zwave (not plus) model. I had -1 for years and occasionally had issues, needing to power cycle or even rejoin.
+Gd00z-4 and -5 are the zwave plus model. 
+Gd00z-6 and higher are plus and also support S2 security. I recently updated to a -6 and have zero issues. Would recommend. 
+
+Depending on the model it could be ADT branded. Just make sure you're getting the newer revision.",1603498965,g9tolmw,t3_jgu01r,t3_jgu01r,/r/homeautomation/comments/jgu01r/what_are_my_zwavezigbee_options_for_garage_door/g9tolmw/,1,homeautomation
+Reasonable-Canary-76,"If you are going to pay for a cloud service, IMO, Google's Nest is the best for picture and has a fantastic app with facial recognition.
+
+Eufy is a decent somewhat ""non"" cloud based alternative
+
+If you have some tech skills and the budget, Ubiquiti is great.
+
+If you like to tinker, Wyze outdoor cam and the upcoming doorbell could be a good affordable option.
+
+For my home I use the nest doorbell and then indoor wyzecams on the outside (under an overhang they work just fine). It's cheap and gets the job done with 24x7 recording (power required)
+
+&amp;#x200B;
+
+How I would do it based on that picture: Nest doorball camera. You can subscribe to the cloud service if you want facial recognition and more video retention. It isn't required. 
+
+Then I would put 2 wyzecams up on each corner of that garage under the overange ($25 each, plus a 32gb microsd card and a 10 foot USB extension power cable to power them). That way you aren't dicking around with batteries and have **24x7** recording. For me, 24x7 uninterrupted recording is worth it. If you have any sort of security system that doesn't do 24x7 recording... it isn't really a security system. Additionally you can put another wyze indoor camera under the overhang of your doorway pointing to the right if you want even more coverage.",1603484071,g9skezd,t3_jgthng,t3_jgthng,/r/homeautomation/comments/jgthng/i_need_help_choosing_a_doorbell_security_system/g9skezd/,1,homeautomation
+RScottyL,"As far as my doorbell, I have the Ring Elite, which is POE, so I did have to run a network cable to that location!
+
+Ring also makes a Floodlight Cam for above the garage, but it would be wireless: [https://shop.ring.com/products/floodlight-cam](https://shop.ring.com/products/floodlight-cam)
+
+As far as any other locations, you might look in to getting a security camera system (POE), 4K! It will record to a local DVR and you can pull them up and monitor them at any time!",1603481871,g9sg2xg,t3_jgthng,t3_jgthng,/r/homeautomation/comments/jgthng/i_need_help_choosing_a_doorbell_security_system/g9sg2xg/,1,homeautomation
+SnooPies1641,"There are many security cameras that work with Google Home and are of the same quality level but cheaper than Nest cam. 
+
+I think Ring Indoor can satisfy most of the needs for home monitoring. It cost around 50 bucks. If you don't need 24/7 recording and accept 12-second motion recording, you can  consider the 20 bucks Wyze Cam.
+
+Want AI detection but don't want to pay the subscription? Eufy indoor and SimCam 1S can tell the difference between people and pets, and provide activity zones without cloud processing.",1603434862,g9qhyb7,t3_jgd3rq,t3_jgd3rq,/r/smarthome/comments/jgd3rq/nest_cameras/g9qhyb7/,1,smarthome
+Ginge_Leader,"No, cameras were not part of the security hub.   But yeah, I wouldn't feel confident with investing in them.",1603425918,g9q6wn4,t3_jgd3rq,t1_g9q5tzi,/r/smarthome/comments/jgd3rq/nest_cameras/g9q6wn4/,1,smarthome
+toph22,Didn’t google just kill their home security products? Does that include the cameras? I’m not so happy with google and their product lifecycle right now.,1603425223,g9q5tzi,t3_jgd3rq,t3_jgd3rq,/r/smarthome/comments/jgd3rq/nest_cameras/g9q5tzi/,2,smarthome
+1Tekgnome,"Google for speech and contextual recognition.  Alexa for better automation support 🤷‍♂️
+
+I specifically run google homes in each room, with GE z wave switch's, SM motion sensors, Samsung ST hub, Abode home security system with z wave door sensors, and z wave smart locks, and wyze security cams.
+
+Also have about 20 tp Link bulbs, smart outlets, smart coffee maker, 4 chrome casts, an bradlink RF/IR hub, Switch Bot Hub, three robo vacs, and 4 google wifi mesh routers an 100"" automated projector screen, automated blinds, nest thermostat, and various other devices I'm forgetting.",1603418359,g9pslsc,t3_jg4ay3,t3_jg4ay3,/r/smarthome/comments/jg4ay3/smart_home_poll/g9pslsc/,1,smarthome
+pugz1ey,"Zwave over Wifi   
+the batteries last longer. 
+
+Zwave uses a lower frequency radio .. which also means lower bandwidth, but who cares when it's basic commands that are getting broadcast. Then you also don't need to go down the rabbit hole of having a separate IoT WiFi network which is recommended for security.",1603389521,g9o4rng,t3_jg2xuz,t3_jg2xuz,/r/homeautomation/comments/jg2xuz/new_house_buying_a_yale_lock_wifi_or_zwave/g9o4rng/,1,homeautomation
+uncle_tony123,"Shelly all the way for safety, sonoff for the price,
+I have done the whole electrics for a house in the UK with Shelly and we wired it all up as you would a normal house, and then the Shelly dimmers fit nice a snug in the back of the wall plates and it makes it all ""smart"" they are a great piece of kit!
+
+I got a few of the sonoff switches as they were so much cheaper but the build quality was horrible, the connections for the cables seemed weak and I would never trust putting it inside a wall..",1603482318,g9sgyit,t3_jghsly,t3_jghsly,/r/homeautomation/comments/jghsly/shelly_vs_sonoff/g9sgyit/,1,homeautomation
+LaughterHouseV,"About as big as the market of people willing to trust a HA company to stay in business, rather than have local control.
+
+Eventually, there'll only be subscription vacuuming. They're just in the transition phase.
+
+Source: literally every other company that introduces a subscription after having a ""you own it fully"" option for a long while.",1603463913,g9rgapg,t3_jgf5wn,t1_g9rfo4p,/r/homeautomation/comments/jgf5wn/hold_up_we_now_have_a_subscription_plan_for_a/g9rgapg/,1,homeautomation
+LoganJFisher,"Personally, Zigbee &gt; WiFi &gt; Zwave.
+
+I don't trust that ZWave will still be around in 5 years, and I don't want to buy into a doomed ecosystem.",1603405758,g9p5i7k,t3_jg2xuz,t3_jg2xuz,/r/homeautomation/comments/jg2xuz/new_house_buying_a_yale_lock_wifi_or_zwave/g9p5i7k/,1,homeautomation
+sfocdg,"EXACTLY!!!
+
+You haven't scanned a QR in a decade... and practically NO ONE is using NFC widely outside of payment.
+
+I agree with you 100% QR (as with most new or underused tech) is used poorly - someone in marketing says ""hey I've got an idea. Let's have someone do \_\_\_\_\_\_\_\_\_""  And it's usually a bad outcome.
+
+Yes, my experience is similar to yours in both QR and NFC... HOWEVER... that doesn't mean that it's a dead animal.
+
+Look - you hate my idea - fine.. but ALONG with the doorbells at the entryway... there is also a qr/nfc... as people get more comfortable with this sort of thing.. don't you think someone might... just might... scan it... and realize they may want to opt to shoot their host a quick text, or have a video chat?
+
+You may not... but trust me... some people would... ok, maybe just me...",1603388247,g9o22vs,t3_jg2e49,t1_g9o0jij,/r/smarthome/comments/jg2e49/replace_doorbell_outside_and_ringer_inside_with_2/g9o22vs/,1,smarthome
+sh0ch,"Sort of fair point, but I don't trust technology to accurately feed/medicate my dogs. Also I can't afford a robot to hold my dog and force a pill down their throat.",1603331841,g9luhtz,t3_jfnfkj,t1_g9lcv49,/r/homeautomation/comments/jfnfkj/smart_iot_button/g9luhtz/,1,homeautomation
+anon6757,"Per ST support, SmartThings has dropped support for SkyBell due to SkyBell not maintaining their platform:
+
+ *I  would like to inform you that due to some integration issues with the cloud services, the support for SkyBell HD devices has been removed from SmartThings.* 
+
+*From time to time we deprecate support for devices that no longer meet  our quality thresholds for Works With SmartThings certification.*
+
+*I appreciate you sharing your thoughts on SkyBell HD with the new SmartThings app.*
+
+I'm not surprised since SkyBell just screwed over the owners of SkyBell v1 and just bricked them after a few years and shut off the v1 server. Should have learned from that not to trust SkyBell as a company.",1603313457,g9kwam1,t3_jfg1q1,t3_jfg1q1,/r/smarthome/comments/jfg1q1/skybell/g9kwam1/,1,smarthome
+Quatroking,"&gt;* YeeLight  
+&gt;  reverse engineered protocol, so I am hesitant to trust we won't be blocked in the future
+
+huh? Yeelight provides the protocol spec on their own website: https://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf
+
+I've been using six of them for over a year now, they're pretty solid.",1603296044,g9jvvlp,t3_jfcenw,t3_jfcenw,/r/homeautomation/comments/jfcenw/rgbct_bulbs_are_a_mess_what_do_you_use/g9jvvlp/,1,homeautomation
+kaizendojo,"No, but I have no pets and it's just me so the clean base seemed like overkill for me.  In your case it might make sense but you can always buy it separately later on if you see the use case.  I usually go about four missions or so before emptying the on board and cleaning the filter.  I bought a Eufy hand vac to get the corners or for quick clean ups and between the two my floors are spotless.
+
+I'm hoping to try out the roomba floor mop (Braava) at some point; I like how the i3 and the Braava work together.  I'm hesitant to trust both tasks to one bot though.  They're two very different tasks and it's hard for me to believe one robot can be designed to do both well.",1603205738,g9fs0nn,t3_jep8um,t1_g9fqpkt,/r/homeautomation/comments/jep8um/eufy_died_need_something_to_replace_it/g9fs0nn/,1,homeautomation
+olderaccount,"Don't trust your life and safety to an open-loop automation circuit that requires a lot of different parts to work properly to keep you safe.  
+
+Either modify the machine itself to have a closed-loop safety circuit or get a new machine.",1603110254,g9bf839,t3_jdz0wl,t3_jdz0wl,/r/homeautomation/comments/jdz0wl/power_socket_that_turns_off_after_power_has_been/g9bf839/,1,homeautomation
+babecafe,"Useful, but the reality is wiring to breakers is done long before the switch/outlet covers are put on. Switches and outlets could be installed before or after drywall - mine were done after drywall. Covers are put on after painting the wall, and is otherwise a fairly mindless task: just match the number of gangs and screw them in place all around the house.
+
+So, is the worker installing the covers going to consult someone's circuit map and put on labels that no one else can see without undoing the work? A homeowner or subsequent worker shouldn't trust such labels.
+
+I had my electrician label breaker panels as they pulled the rough wiring. Even then, it wasn't perfect, but it's more accurate than when the electrician gets reminded the local inspector will check for breaker panel labels just before final inspection.
+
+If I had reason to remove a cover once, I might label it in case I had to do it again. But I'd still check the correct breaker has been turned off.",1603070751,g9a4zp6,t3_jds2gg,t3_jds2gg,/r/smarthome/comments/jds2gg/life_hacks_label_backs_of_switchoutlet_covers/g9a4zp6/,4,smarthome
