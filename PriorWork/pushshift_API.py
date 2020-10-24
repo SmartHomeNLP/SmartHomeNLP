@@ -1,3 +1,10 @@
+'''
+Visited: 24/10/2020.
+Gathers from two subreddits (homeautomation, smarthome)
+and matches with search terms (trust, security, privacy).
+
+'''
+
 import pandas as pd
 import requests
 import json
@@ -5,8 +12,20 @@ import csv
 import datetime
 import re
 
+'''
+after (original value): "01/01/2019": 1546300800
+before (original value): "07/01/2019": 1561939200
+This could be extended to present. 
+How much data can we get here? How much do we want?
+--> seems like one can get 200 requests per minute. 
+Does it overwrite when it writes out?
+'''
 
-def getPushShiftData(query_term, subreddit, after=1546300800, before=1561939200, sort='asc'):
+# test with recent data to find out what is going on
+after = 1603152000
+before = 1603497600
+
+def getPushShiftData(query_term, subreddit, after=after, before=before, sort='asc'):
     '''
     Input:
         - query_term
@@ -182,7 +201,8 @@ for num, reddit in enumerate(subreddit):
 
 
 # write the data in a json_file
-with open('reddit_data.json', 'w') as outfile:
+# changed the output name. 
+with open('reddit_data_october.json', 'w') as outfile:
     # json.dump each dict individually and write the commas and new lines manually
     outfile.write(
         '[' +
