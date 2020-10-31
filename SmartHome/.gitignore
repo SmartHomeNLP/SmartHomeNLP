@@ -5,13 +5,11 @@ Smarthome Classification.pdf
 .DS_Store
 mallet-2.0.8
 *-checkpoint*
-*.html
 reddit_API.py
 comments_query.csv
 Smoothed_LDA.png
 old
 DataSource_backup
-password.txt
 preprocessed_comments.csv
 logging
 evaluation_metrics
