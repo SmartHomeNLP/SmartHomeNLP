@@ -15,10 +15,10 @@
 	To understand "security", "privacy", etc.?
 	When is this used?
 	\item Commercial intentions?:\\
-	Is the intention to use this commercially? 
-	The API specifically states that this should not be used commercially. 
+	Is the intention to use this commercially?
+	The API specifically states that this should not be used commercially.
 	If commercial aspects are of interest, we need to have it approved.
-	
+
 
 \end{itemize}
 
@@ -40,18 +40,32 @@
 	\emph{Questions}: \\ Why does it not save them?
 	How many tweets can/should we get?
 	\item scrape.py:\\
-	Generates a user-agent to access the different 
+	Generates a user-agent to access the different
 	articles used for generating the \textit{train\_data.json} file.\\
-	\emph{Questions}: \\ 
-	Why are there so many functions for scraping? 
+	\emph{Questions}: \\
+	Why are there so many functions for scraping?
 	Is it because they differ in format and need different preprocessing to read?
 	\item pushshift\_aggs.py:\\
-	Used to scrape the frequency of query-terms 
-	\textit{"privacy", "security", "trust"} for the last 3 years on the subreddits. 
+	Used to scrape the frequency of query-terms
+	\textit{"privacy", "security", "trust"} for the last 3 years on the subreddits.
 	It seems like the \textit{frequency} keyword establishes the sampling rate.
 	This is used to plot how many comments uses these query words over 3 years.
-	\emph{Questions}: \\ 
+	\emph{Questions}: \\
 	Is this actually the frequency?
+	\item pushshift\_API.py:\\
+	Used to scrape threads from two subreddits.
+	(homeautomation, smarthome) based on three
+	query terms (privacy, security, trust). If
+	a comment (not post?) matches one of these
+	terms then the whole thread is downloaded.
+\end{itemize}
+
+\section{Meeting}
+\begin{itemize}
+	\item Questionaire:
+	\item How far back: as far as possible.
+	\item Quantitative survey: trust, privacy, security (not really important). Coming into the frame when people have issues. Only important when something happens. First general idea (API for general, push-shift for general). Papers/Wikipedia etc. to train on concepts (privacy, security, trust). For ELMO to learn the concepts.
+	\item Further: assemblage theory: human-object vs. human-human relationships. (master-servant, friend). Do they use it more or less when they have different relations. Interest in outcome. Do these relationships exist? Linguistic features of master-servant vs. partner-partner. Does this predict whether people expand to more SmartHome - BigFive as well. Low-hanging fruit (sentiment analysis).
 \end{itemize}
 
 \end{document}
