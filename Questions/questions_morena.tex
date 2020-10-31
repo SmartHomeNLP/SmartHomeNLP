@@ -18,4 +18,17 @@
     Personal account (MySQL community server?).
 \end{itemize}
 
+\section{Notes}
+\begin{itemize}
+    \item bot\_test.py:\\
+    bot\_test.py seems to use the SQL-server, and extract either the submissions or comments of the subreddit "smarthome". \\
+    This program is supposed to be run in the terminal, which loops through the authors of the comments, and asks whether the user is a bot based on their comment. \\
+    The user is asked to type either yes or no. If yes, the username is added to the list of usernames for bot-users on Reddit. \\
+    \line(1,0){250}\\
+    \textbf{\emph{Questions}}:\\
+    How does this whole SQL-database work? Is it used to scrape? What is this cursor object? Is it just the convenient way to store the data (using SQL format) or does it do more than that?
+    Why are the possible bots not saved anywhere? And where are they used afterwards?
+    \item 
+\end{itemize}
+
 \end{document}
