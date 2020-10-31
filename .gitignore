@@ -1,2 +1,6 @@
 .vscode
-DataSource_backup
+/SmartHome/DataSource_backup
+/SmartHome/logging
+/SmartHome/old
+/SmartHome/tf
+/SmartHome/tfhub_models
