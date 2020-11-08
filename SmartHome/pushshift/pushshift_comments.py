@@ -1,3 +1,8 @@
+''' Questions: 
+* what happens with higher sys.argv?
+---- 100 is the maximum.
+'''
+
 import csv
 import datetime
 import json
@@ -7,7 +12,9 @@ import sys
 import pandas as pd
 import requests
 
-def relevantComments(query_term, size=sys.argv[1]): #sys.argv command line input.
+
+def relevantComments(query_term, size = sys.argv[1]): 
+    
     '''
     Input:
      > query term
@@ -23,7 +30,7 @@ def relevantComments(query_term, size=sys.argv[1]): #sys.argv command line input
         str(size)
 
     try:
-        r = requests.get(url_comment)
+        r = requests.get(url_comment) #response 200, weird type.
         data = json.loads(r.text)
 
         # List of information we are interested to collect
@@ -85,5 +92,7 @@ if __name__ == '__main__':
     print('Tot. rows without duplicates: ', df.shape[0])
 
     # Write down csv file
-    df.to_csv('./comments.csv', index=False)
+    df.to_csv('comments.csv', index=False)
     print('DONE!')
+
+df
