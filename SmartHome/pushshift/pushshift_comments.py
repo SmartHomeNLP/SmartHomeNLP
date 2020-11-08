@@ -7,8 +7,7 @@ import sys
 import pandas as pd
 import requests
 
-
-def relevantComments(query_term, size=sys.argv[1]):
+def relevantComments(query_term, size=sys.argv[1]): #sys.argv command line input.
     '''
     Input:
      > query term
