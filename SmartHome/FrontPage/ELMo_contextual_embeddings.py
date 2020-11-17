@@ -3,6 +3,15 @@
 # conda install tensorflow-hub
 # TODO make it as function: input data source output ELMo's vectors.
 
+'''
+17-11-2020: 
+does something with security and privacy.
+does nothing with trust?
+as far as we can tell: 
+3 articles: privacy.
+1 article: security.
+'''
+
 import tensorflow_hub as hub
 import tensorflow as tf
 import os
