@@ -87,7 +87,7 @@ def read_zst(name):
 
     # Write down csv file
     print('Creating CSV file', name_csv)
-    submissions.to_csv('../../data/submissions{}.csv'.format(name_csv), index=False) ## we want it in data.
+    submissions.to_csv('../../data/raw/submissions{}.csv'.format(name_csv), index=False) ## we want it in data.
     print('-'*40)
 
 ## pathing: right now on external (& windows..)
