@@ -63,5 +63,3 @@ collected.to_csv(f'{path}\submissions_collected_raw.csv', index=False)
 
 ## checking whether it worked properly
 collected_test = pd.read_csv(f'{path}\submissions_collected_raw.csv')
-collected_test.columns 
-collected_test.dtypes 

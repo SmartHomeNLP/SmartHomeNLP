@@ -8,70 +8,48 @@ from contextlib import contextmanager
 import gensim
 import matplotlib.pyplot as plt
 import seaborn as sns
-import mysql.connector
 import nltk
 import numpy as np
 import pandas as pd
 import spacy
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-import re
+import os 
+import glob
+import time
 
+## import files 
+os.getcwd()
+path = r'c:\Users\95\Dropbox\MastersSem1\NLP\SmartHome\SmartHomeNLP\SmartHome\data\preprocessed' # use your path
 
-warnings.filterwarnings("ignore", category=FutureWarning)
-warnings.filterwarnings("ignore", category=DeprecationWarning)
+## perhaps specify dtypes: https://www.roelpeters.be/solved-dtypewarning-columns-have-mixed-types-specify-dtype-option-on-import-or-set-low-memory-in-pandas/
+comments = pd.read_csv(f'{path}/comments_collected.csv')
+submissions = pd.read_csv(f'{path}/submissions_collected.csv')
 
-# Get the passowrd
-with open('password.txt', 'r') as file:
-    database_password = file.readline()
+## unique: 
+submissions.drop_duplicates(keep = "first", inplace = True) 
+comments.drop_duplicates(keep = "first", inplace = True)
 
-@contextmanager
-def mysql_connection():
-    mydb = mysql.connector.connect(user="root",
-                                   password=database_password,
-                                   host="localhost", 
-                                   port="3305",
-                                   database="reddit_smarthome")
+## columns 
+comments.columns 
+submissions.columns
+## downsample for now: 
+#comments = comments[comments['created_utc'] > '2019-12-01 00:00:00']
+#submissions = submissions[(submissions['created_utc'] >= '2019-12-01 00:00:00') & (submissions['created_utc'] <= comments_sub['created_utc'].max())]
 
-    mycursor = mydb.cursor()
-
-    yield mycursor
-
-    mydb.close()
-    mycursor.close()
-
-
-# import data
-with mysql_connection() as mycursor:
-    mycursor.execute('SELECT * FROM reddit_comments')
-    comments = mycursor.fetchall()
-
-with mysql_connection() as mycursor:
-    mycursor.execute('SELECT * FROM reddit_submissions')
-    submissions = mycursor.fetchall()
-
-
-comments = pd.DataFrame(np.array(comments), 
-                        columns=['id', 'link_id', 'parent_id', 'created_utc',\
-                                 'body', 'author', 'permalink', 'score',\
-                                 'subreddit'])
-
-submissions = pd.DataFrame(np.array(submissions), 
-                        columns=['id', 'created_utc',\
-                                 'title', 'selftext', 'author', 'permalink', 'score',\
-                                 'subreddit', 'num_comments', 'link_id'])
-
-# Randomly select num_comments for each subreddit where link_id == parent_id 
-# Fist tier comments
-tmp = comments[comments['link_id'] == comments['parent_id']]
-df = pd.concat([tmp[tmp['subreddit'] == 'smarthome'].sample(n=5000, random_state=123),
-                            tmp[tmp['subreddit'] == 'homeautomation'].sample(n=5000, random_state=123)])
-
-# add a parent id column without t#_
-comments['id_parent_copy'] = [re.sub('.+_', '', x) for x in comments['parent_id']]
-# initiate an empty database 
+## set-up
 df_tree = pd.DataFrame(columns = ['tree_ids', 'tree_bodies'])
 
+## only take comments that refer to a submission that we have. 
+## i.e. filtering out the comments that refer back to things that
+## were submitted before our first data.
+df = comments[(comments['link_id'] == comments['parent_id']) & (comments.link_id.isin(submissions.link_id))]
+
+## remove pretext in id. 
+comments['id_parent_copy'] = [re.sub('.+_', '', x) for x in comments['parent_id']]
+
+## big funky loop
+start = time.time()
 try:
     for first_com in df.loc[:, 'link_id'].unique(): # Comments from 7283 submission
         # For each parent_id get all comments with the same link_id
@@ -102,15 +80,13 @@ try:
             df_tree = df_tree.append({'tree_ids': tree_ids[n_row], 'tree_bodies': tree_bodies[n_row]}, ignore_index=True)
 except:
     first_com
+end = time.time() 
+print(f'time elapsed = {end - start}')
 
-
-
-# ADD SUBMISSION INFO
-# extract first id for all rows
 df_tree['id'] = [re.sub('\\s.*', '',x) for x in  df_tree['tree_ids']]
-
 df_tree = df_tree.merge(comments.loc[:, ['id','link_id']], on = 'id')
 df_tree = df_tree.merge(submissions.loc[:, ['link_id', 'title', 'selftext']], on='link_id')
 
+path = 'c:\\Users\\95\\Dropbox\\MastersSem1\\NLP\\SmartHome\\SmartHomeNLP\\SmartHome\\data\\preprocessed'
+df_tree.to_csv(f'{path}\df_tree.csv', index=False)
 
-df_tree.to_csv('df_tree.csv', index=False)
