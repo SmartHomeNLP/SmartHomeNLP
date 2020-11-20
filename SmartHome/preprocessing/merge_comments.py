@@ -1,5 +1,3 @@
-import glob
-
 ## INSPECT THE DATA
 '''
 Variables:
@@ -20,9 +18,9 @@ Need to figure out what is happening.
 '''
 
 import pandas as pd
+import glob
 
 # MAIN:
-
 import os
 import datetime
 
@@ -46,4 +44,4 @@ combined_data["created_utc"] = combined_data["created_utc"].apply(lambda x: date
 
 combined_data = pd.concat((original_comments, combined_data), ignore_index = True)
 
-combined_data.to_csv("../data/preprocessed/comments_collected.csv")
+combined_data.to_csv("../data/preprocessed/comments_collected.csv", index = False)
