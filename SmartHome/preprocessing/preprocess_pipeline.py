@@ -9,6 +9,7 @@ submissions = pd.read_csv('../data/preprocessed/submissions_collected.csv')
 submissions.drop_duplicates(keep = "first", inplace = True) 
 comments.drop_duplicates(keep = "first", inplace = True)
 
+
 ### CONCAT SUBMISSIONS AND COMMENTS:
 
 df = get_data(submissions, comments, filename = "data.csv")
