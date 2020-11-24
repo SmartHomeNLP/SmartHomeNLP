@@ -9,10 +9,17 @@ submissions = pd.read_csv('../data/preprocessed/submissions_collected.csv')
 submissions.drop_duplicates(keep = "first", inplace = True) 
 comments.drop_duplicates(keep = "first", inplace = True)
 
+### CONCAT SUBMISSIONS AND COMMENTS:
+
 df = get_data(submissions, comments, filename = "data.csv")
 
+### REMOVE HTML 
 df = remove_html(df)
+
+### CONCAT WORDS WITH HYPHENS IN BETWEEN
 df = hyphenate(df)
+
+### GET STOP WORDS AND VOCAB
 stop_words = get_stop_words()
 english_vocab = get_english_words()
 
