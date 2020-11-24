@@ -26,69 +26,64 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 # submissions = data.submissions
 
 # import new granularity file
-df = pd.read_csv("../data/preprocessed/data.csv")
+#df = pd.read_csv("../data/preprocessed/data.csv")
 
 # Find URL
-def find_URL(comment):
-    return re.findall(r'((?:https?:\/\/)(?:\w[^\)\]\s]*))', comment)
-
-# create a colummn with the pre-processed text:
-# remove URLs
-df['clean_text'] = [re.sub(r"((?:https?:\/\/)(?:\w[^\)\]\s]*))",'', x) for x in df['text']]
-
-# Unscape html formatting
-df['clean_text'] =  [html.unescape(x) for x in df['clean_text']]
+def remove_html(df):
+    df["clean_text"] = [re.sub(r"((?:https?:\/\/)(?:\w[^\)\]\s]*))",'', x) for x in df['text']]
+    df['clean_text'] =  [html.unescape(x) for x in df['clean_text']]
+    return df
 
 #NOTE: consider internal hyphen as full words. "Technical vocabulary"
 # pattern = re.compile(r"\b(\w*)-(\w*)\b", re.I)
 # hyphen_words = []
 # for i in df.clean_text:
 #     hyphen_words.append(pattern.findall(i))
-
-df['clean_text'] = [re.sub(r"\b(\w*)-(\w*)\b", r"\g<1>_\g<2>", x) for x in df['clean_text']]
-#first one that wasn't instant
+def hyphenate(df):
+    df['clean_text'] = [re.sub(r"\b(\w*)-(\w*)\b", r"\g<1>_\g<2>", x) for x in df['clean_text']]
+    return df 
 
 # NLTK Stop words
 # Probably should be done for the Topic Models, but not for the
 # event detection, so again we need to figure out the pipeline
-
-stop_words = stopwords.words('english')
+def get_stop_words():
+    stop_words = stopwords.words('english')
 
 #Stopwords list from https://github.com/Yoast/YoastSEO.js/blob/develop/src/config/stopwords.js
-more_stopwords = ["a", "about", "above", "after", "again", "against", "all", "am", "an", "and",
-             "any", "are", "as", "at", "be", "because", "been", "before", "being", "below",
-             "between", "both", "but", "by", "could", "did", "do", "does", "doing", "down",
-             "during", "each", "few", "for", "from", "further", "had", "has", "have",
-             "having", "he", "he'd", "he'll", "he's", "her", "here", "here's", "hers",
-             "herself", "him", "himself", "his", "how", "how's", "i", "i'd", "i'll", "i'm",
-             "i've", "if", "in", "into", "is", "it", "it's", "its", "itself", "let's", "me",
-             "more", "most", "my", "myself", "nor", "of", "on", "once", "only", "or", "other",
-             "ought", "our", "ours", "ourselves", "out", "over", "own", "same", "she", "she'd",
-             "she'll", "she's", "should", "so", "some", "such", "than", "that", "that's", "the",
-             "their", "theirs", "them", "themselves", "then", "there", "there's", "these",
-             "they", "they'd", "they'll", "they're", "they've", "this", "those", "through",
-             "to", "too", "under", "until", "up", "very", "was", "we", "we'd", "we'll",
-             "we're", "we've", "were", "what", "what's", "when", "when's", "where",
-             "where's", "which", "while", "who", "who's", "whom", "why", "why's",
-             "with", "would", "you", "you'd", "you'll", "you're", "you've", "your",
-             "yours", "yourself", "yourselves"]
+    more_stopwords = ["a", "about", "above", "after", "again", "against", "all", "am", "an", "and",
+                "any", "are", "as", "at", "be", "because", "been", "before", "being", "below",
+                "between", "both", "but", "by", "could", "did", "do", "does", "doing", "down",
+                "during", "each", "few", "for", "from", "further", "had", "has", "have",
+                "having", "he", "he'd", "he'll", "he's", "her", "here", "here's", "hers",
+                "herself", "him", "himself", "his", "how", "how's", "i", "i'd", "i'll", "i'm",
+                "i've", "if", "in", "into", "is", "it", "it's", "its", "itself", "let's", "me",
+                "more", "most", "my", "myself", "nor", "of", "on", "once", "only", "or", "other",
+                "ought", "our", "ours", "ourselves", "out", "over", "own", "same", "she", "she'd",
+                "she'll", "she's", "should", "so", "some", "such", "than", "that", "that's", "the",
+                "their", "theirs", "them", "themselves", "then", "there", "there's", "these",
+                "they", "they'd", "they'll", "they're", "they've", "this", "those", "through",
+                "to", "too", "under", "until", "up", "very", "was", "we", "we'd", "we'll",
+                "we're", "we've", "were", "what", "what's", "when", "when's", "where",
+                "where's", "which", "while", "who", "who's", "whom", "why", "why's",
+                "with", "would", "you", "you'd", "you'll", "you're", "you've", "your",
+                "yours", "yourself", "yourselves"]
 
-stop_words.extend(list(set(more_stopwords) - set(stop_words)) + ['etc', 'however', 'there', 'also', 'digit'])
+    stop_words.extend(list(set(more_stopwords) - set(stop_words)) + ['etc', 'however', 'there', 'also', 'digit'])
+
+    return stop_words
 
 #We specify the stemmer or lemmatizer we want to use
-word_rooter = nltk.stem.snowball.PorterStemmer(ignore_stopwords=False).stem
+#word_rooter = nltk.stem.snowball.PorterStemmer(ignore_stopwords=False).stem
 
 # load default word frequency list for misspelling
-spell = SpellChecker() #where is this used?
-spell.word_frequency.load_text_file('../DataSource_backup/free_text.txt') #What is this free_text stuff? Seems like this is all the text from the previous reddit dumps 
+#spell = SpellChecker() #where is this used?
+#spell.word_frequency.load_text_file('../DataSource_backup/free_text.txt') #What is this free_text stuff? Seems like this is all the text from the previous reddit dumps 
 
 # Remove comments where 70% words are not part of the english vocabulary
 #NEEDED: "words" from nltk
-#nltk.download("words")
-english_vocab = set(w.lower() for w in nltk.corpus.words.words())
-
-import timeit
-
+def get_english_words():
+    nltk.download("words")
+    return set(w.lower() for w in nltk.corpus.words.words())
 
 def clean_comment(comment, lemma=True, del_tags = ['NUM', 'PRON', 'ADV', 'DET', 'AUX', 'SCONJ', 'PART']):
     start = timeit.timeit()
@@ -175,18 +170,19 @@ df['clean_text'] = df.clean_text.apply(clean_comment)
 ### Consider parallel processing for this. 
 ##______
 
-df.to_csv("../data/preprocessed/data_clean.csv")
-
-len(df) #52795
-# drop rows left without comments
-df.drop(df.index[df.clean_text == "",].tolist(), axis=0, inplace=True)
-len(df) #52349
-df.drop(df.index[df.clean_text.isna(),].tolist(), axis=0, inplace=True)
-# remove rows with less than 15 words (short observations)
-df = df.loc[df['clean_text'].map(lambda x: len(str(x).strip().split())) > 15,]
-len(df) #40683
-
+#df.to_csv("../data/preprocessed/data_clean.csv")
+def drop_rows(df):
+    print("---- Dropping rows ----")
+    print(f"Original no. rows: {len(df)}")
+    df.drop(df.index[df.clean_text == "",].tolist(), axis=0, inplace=True)
+    print(f"No. rows after dropping empty strings: {len(df)}")
+    df.drop(df.index[df.clean_text.isna(),].tolist(), axis=0, inplace=True)
+    # remove rows with less than 15 words (short observations)
+    print(f"No. rows after dropping NAs: {len(df)}")
+    df = df.loc[df['clean_text'].map(lambda x: len(str(x).strip().split())) > 15,]
+    print(f"No. rows after dropping strings < length 15: {len(df)}")
+    return df
 # Descriptive visualization
-NLP_vis.freq_words(df["clean_text"], True, 50) ## NOTE: Much of the preprocessing steps and whether they fail can be gleened from reviewing these 
-NLP_vis.words_count(df["clean_text"])
+#NLP_vis.freq_words(df["clean_text"], True, 50) ## NOTE: Much of the preprocessing steps and whether they fail can be gleened from reviewing these 
+#NLP_vis.words_count(df["clean_text"])
 

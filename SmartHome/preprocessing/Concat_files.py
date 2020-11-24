@@ -19,25 +19,17 @@ import glob
 import time
 
 ## import files 
-os.getcwd()
-#path = r'c:\Users\95\Dropbox\MastersSem1\NLP\SmartHome\SmartHomeNLP\SmartHome\data\preprocessed' # use your path
-
 ## perhaps specify dtypes: https://www.roelpeters.be/solved-dtypewarning-columns-have-mixed-types-specify-dtype-option-on-import-or-set-low-memory-in-pandas/
-comments = pd.read_csv('../data/preprocessed/comments_collected.csv')
-submissions = pd.read_csv('../data/preprocessed/submissions_collected.csv')
+#comments = pd.read_csv('../data/preprocessed/comments_collected.csv')
+#submissions = pd.read_csv('../data/preprocessed/submissions_collected.csv')
 
 ## unique: 
-submissions.drop_duplicates(keep = "first", inplace = True) 
-comments.drop_duplicates(keep = "first", inplace = True)
+#submissions.drop_duplicates(keep = "first", inplace = True) 
+#comments.drop_duplicates(keep = "first", inplace = True)
 
 ## columns 
-comments.columns 
-submissions.columns
-## downsample for now: 
-#comments = comments[comments['created_utc'] > '2019-12-01 00:00:00']
-#submissions = submissions[(submissions['created_utc'] >= '2019-12-01 00:00:00') & (submissions['created_utc'] <= comments_sub['created_utc'].max())]
 
-t1 = time.time()
+#t1 = time.time()
 
 def get_data(submissions, comments, filename = ""):
     df = pd.DataFrame()
@@ -58,8 +50,8 @@ def get_data(submissions, comments, filename = ""):
         df.to_csv("../data/preprocessed/" + filename, index = False)
     return df
 
-test = get_data(submissions, comments, filename = "data.csv")
+#test = get_data(submissions, comments, filename = "data.csv")
 
-print(time.time() - t1)
+#print(time.time() - t1)
 
 
