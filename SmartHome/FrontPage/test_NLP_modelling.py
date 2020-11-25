@@ -86,8 +86,11 @@ model = models.wrappers.LdaMallet(mallet_path, corpus, num_topics=10, id2word=fi
 model.print_topics(num_topics=10, num_words=10)
 
 import pyLDAvis
+import pyLDAvis.gensim
 
-
+pyLDAvis.enable_notebook()
+vis = pyLDAvis.gensim.prepare(her_model, corpus, filter_dict)
+pyLDAvis.display(vis)
 
 # Logging Gensim's output
 # return time in seconds since the epoch
