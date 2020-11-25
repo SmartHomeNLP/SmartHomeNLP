@@ -81,16 +81,12 @@ NLP_vis.vocabulary_descriptive(filter_dict, corpus)
 
 mallet_path = 'C:/mallet/bin/mallet'
 
-model = models.wrappers.LdaMallet(mallet_path, corpus, num_topics=10, id2word=filter_dict)
+model = models.wrappers.LdaMallet(mallet_path, corpus, num_topics=20, id2word=filter_dict, alpha=20)
 
-model.print_topics(num_topics=10, num_words=10)
+model.print_topics(num_topics=20, num_words=10)
 
 import pyLDAvis
 import pyLDAvis.gensim
-
-pyLDAvis.enable_notebook()
-vis = pyLDAvis.gensim.prepare(her_model, corpus, filter_dict)
-pyLDAvis.display(vis)
 
 # Logging Gensim's output
 # return time in seconds since the epoch
@@ -143,14 +139,43 @@ def LdaGensim_topics(dictionary, corpus, limit, start, step, alpha, beta):
 ### COMPARE GENSIM WITH MALLET:
 ##____________________________
 
-models = LdaGensim_topics(dictionary=filter_dict, corpus=corpus, 
-                                                         start=10, limit=11, step=5, 
-                                                         alpha = [50], 
-                                                         beta = [0.01])
+# models = LdaGensim_topics(dictionary=filter_dict, corpus=corpus, 
+                                                         #start=10, limit=11, step=5, 
+                                                         #alpha = [50], 
+                                                         #beta = [0.01])
 
-her_model = models.get("a50_b0.01_k10")
-her_model.print_topics(10, 10)
-model.print_topics(10,10)
+# her_model = models.get("a50_b0.01_k10")
+# her_model.print_topics(10, 10)
+# model.print_topics(10,10)
+
+### EMIL CODE:
+
+#convert mallet model to lda
+model_gensim = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(model)
+#Visualize with LDAVis
+pyLDAvis.enable_notebook()
+vis = pyLDAvis.gensim.prepare(model_gensim, corpus, filter_dict)
+pyLDAvis.display(vis)
+
+model_gensim.get_term_topics('security', minimum_probability=0.001)
+model_gensim.get_term_topics('trust', minimum_probability=0.001)
+model_gensim.get_term_topics('privacy', minimum_probability=0.001)
+
+model_gensim.print_topics(20)
+
+#print('\nPerplexity:', model_gensim.log_perplexity(corpus))
+
+from gensim.models import CoherenceModel
+
+#coherence_score_lda = CoherenceModel(model=model_gensim, texts=corpus, dictionary=filter_dict, coherence='c_v')
+#coherence_score = coherence_score_lda.get_coherence()
+
+#print('\nCoherence Score:', coherence_score)
+
+### CHECK PREPROCESSING:
+## Spacy lemmatization on all of the sentence
+## Allowed pos_tags should lemmatize if possible and just include the word if it doesn't know it 
+
 
 ##____________________________
 
