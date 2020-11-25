@@ -4,7 +4,6 @@ from contextlib import contextmanager
 import gensim
 import matplotlib.pyplot as plt
 import seaborn as sns
-import mysql.connector
 import nltk
 import numpy as np
 import pandas as pd
@@ -13,9 +12,10 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from sklearn.model_selection import train_test_split
 import html
-import NLP_visualization as NLP_vis
+import timeit
+#import NLP_visualization as NLP_vis
 #import twokenize as ark
-from spellchecker import SpellChecker
+#from spellchecker import SpellChecker
 #import MySQL_data as data
 
 warnings.filterwarnings("ignore", category=FutureWarning)
@@ -148,6 +148,7 @@ def clean_comment(comment, lemma=True, del_tags = ['NUM', 'PRON', 'ADV', 'DET', 
 
 ## EATS UP THE WHOLE COMPUTER, BE CAREFUL!
 
+'''
 import multiprocessing
 
 start_time = timeit.timeit()
@@ -171,6 +172,9 @@ df['clean_text'] = df.clean_text.apply(clean_comment)
 ##______
 
 #df.to_csv("../data/preprocessed/data_clean.csv")
+
+'''
+
 def drop_rows(df):
     print("---- Dropping rows ----")
     print(f"Original no. rows: {len(df)}")

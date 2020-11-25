@@ -1,9 +1,8 @@
 from concat_files import get_data
 from clean_comment import *
 
-
-comments = pd.read_csv('../data/preprocessed/comments_collected.csv')
-submissions = pd.read_csv('../data/preprocessed/submissions_collected.csv')
+comments = pd.read_csv('../data/preprocessed/comments_nobots.csv')
+submissions = pd.read_csv('../data/preprocessed/submissions_nobots.csv')
 
 ## unique: 
 submissions.drop_duplicates(keep = "first", inplace = True) 
@@ -11,7 +10,6 @@ comments.drop_duplicates(keep = "first", inplace = True)
 
 
 ### CONCAT SUBMISSIONS AND COMMENTS:
-
 df = get_data(submissions, comments, filename = "data.csv")
 
 ### REMOVE HTML 
