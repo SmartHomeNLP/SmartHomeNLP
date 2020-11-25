@@ -85,8 +85,10 @@ def get_english_words():
     nltk.download("words")
     return set(w.lower() for w in nltk.corpus.words.words())
 
+
 def clean_comment(comment, lemma=True, del_tags = ['NUM', 'PRON', 'ADV', 'DET', 'AUX', 'SCONJ', 'PART']):
-    start = timeit.timeit()
+    num += 1 
+    if (num % 1000 == 0): print("1000 comments cleaned done")
     #comment = re.sub(r"(<SUB>|nan|<NEW TIER>|<SAME TIER>)", "", comment) #deleting the markers and nan, but we don't have any of these.
     comment = comment.lower() # should be heavily considered in terms of event detection as we will want to detect capitalized letters as a feature
     comment = re.sub(r'&#x200B', ' ', comment) # character code for a zero-width space

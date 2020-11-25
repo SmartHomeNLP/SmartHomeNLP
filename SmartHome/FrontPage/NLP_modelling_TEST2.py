@@ -20,11 +20,15 @@ from tmtoolkit.topicmod import evaluate, tm_lda
 import NLP_visualization as NLP_vis
 import clean_text as clean_fun
 from sklearn.feature_extraction.text import CountVectorizer
+from gensim import corpora, models, utils
+
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-df_train = pd.read_csv('.\\DataSource_backup\\sub_onetree_train.csv', encoding="utf-8")
+## old data:
+os.getcwd()
+df_train = pd.read_csv("../data/preprocessed/data_clean.csv", encoding = "utf-8")
 NLP_vis.words_count(df_train["clean_text"])
 
 # get source comments for further investigations
@@ -51,6 +55,7 @@ NLP_vis.vocabulary_descriptive(dictionary, corpus)
 filter_dict = copy.deepcopy(dictionary)
 filter_dict.filter_extremes(no_below=5, no_above=0.4) 
 NLP_vis.vocabulary_freq_words(filter_dict, False, 30)
+NLP_vis.vocabulary_freq_words(filter_dict, True, 30) # here are the bi-grams!
 
 # SAVE DICTIONARY
 tmp_file = datapath('vocabulary\\nb5_na04')
@@ -67,8 +72,9 @@ filename = datapath('train_bigram\\nb5_na04_bigram.pkl')
 with open(filename, "wb") as f:
     pickle.dump(train_bigram, f)
 
+## running again?
+# now 100k, why exactly that number?
 X = bigram_vectorizer.transform(df_train['clean_text'].tolist())
-
 corpus = Sparse2Corpus(X, documents_columns=False)
 NLP_vis.vocabulary_descriptive(filter_dict, corpus)
 
@@ -76,6 +82,7 @@ NLP_vis.vocabulary_descriptive(filter_dict, corpus)
 
 # Logging Gensim's output
 # return time in seconds since the epoch
+os.chdir("../")
 log_file = os.getcwd() + r'\logging' + r'\log_%s.txt' % int(time.time())
 
 logging.basicConfig(filename=log_file,
@@ -122,6 +129,37 @@ def LdaGensim_topics(dictionary, corpus, limit, start, step, alpha, beta):
 
     return models
 
+
+## models MALLET
+mallet_path = 'C:/mallet/bin/mallet'
+model = models.wrappers.LdaMallet(mallet_path, corpus, num_topics=20, id2word=filter_dict, alpha=20)
+model.print_topics(num_topics=20, num_words=10)
+
+# visualize it 
+import pyLDAvis 
+import pyLDAvis.gensim ## wrapper
+
+# convert shit 
+model_gensim = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(model)
+pyLDAvis.enable_notebook()
+visualize = pyLDAvis.gensim.prepare(model_gensim, corpus, filter_dict, sort_topics = False)
+visualize
+
+## testing her shit.  
+models = LdaGensim_topics(dictionary=filter_dict, corpus=corpus, 
+                                                         start=10, limit=11, step=10, 
+                                                         alpha = [1], 
+                                                         beta = [0.01])
+
+my_mod = models.get('a1_b0.01_k10')
+
+
+
+
+pyLDAvis.display(visualize)
+
+my_mod.print_topics()
+## all of the combinations that she uses. 
 ## something like 640 combinations (40 * 4 * 4)
 models = LdaGensim_topics(dictionary=filter_dict, corpus=corpus, 
                                                          start=5, limit=201, step=5, 
