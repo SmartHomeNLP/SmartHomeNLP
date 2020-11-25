@@ -20,6 +20,11 @@ from tmtoolkit.topicmod import evaluate, tm_lda
 import NLP_visualization as NLP_vis
 import clean_text as clean_fun
 from sklearn.feature_extraction.text import CountVectorizer
+# set up logging so we see what's going on
+import logging
+import os
+from gensim import corpora, models, utils
+logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
@@ -74,6 +79,16 @@ NLP_vis.vocabulary_descriptive(filter_dict, corpus)
 
 ## MODELS
 
+mallet_path = 'C:/mallet/bin/mallet'
+
+model = models.wrappers.LdaMallet(mallet_path, corpus, num_topics=10, id2word=filter_dict)
+
+model.print_topics(num_topics=10, num_words=10)
+
+import pyLDAvis
+
+
+
 # Logging Gensim's output
 # return time in seconds since the epoch
 log_file = os.getcwd() + r'\logging' + r'\log_%s.txt' % int(time.time())
@@ -93,7 +108,7 @@ def LdaGensim_topics(dictionary, corpus, limit, start, step, alpha, beta):
     start: min number of topics
     step: increment between each integer
     alpha: list of prior on the per-document topic distribution.
-    eta: list of prior on the per-topic word distribution. 
+    beta: list of prior on the per-topic word distribution. 
 
     Returns:
     ---------
@@ -122,10 +137,19 @@ def LdaGensim_topics(dictionary, corpus, limit, start, step, alpha, beta):
 
     return models
 
+### COMPARE GENSIM WITH MALLET:
+##____________________________
+
 models = LdaGensim_topics(dictionary=filter_dict, corpus=corpus, 
-                                                         start=5, limit=201, step=5, 
-                                                         alpha = [0.01, 0.1, 1, 10], 
-                                                         beta = [0.01, 0.1, 1, 10])
+                                                         start=10, limit=11, step=5, 
+                                                         alpha = [50], 
+                                                         beta = [0.01])
+
+her_model = models.get("a50_b0.01_k10")
+her_model.print_topics(10, 10)
+model.print_topics(10,10)
+
+##____________________________
 
 
 # [0.01, 0.05, 0.1, 0.5, 1, 5, 10, 50] triggered insufficient memory on RDP server.
