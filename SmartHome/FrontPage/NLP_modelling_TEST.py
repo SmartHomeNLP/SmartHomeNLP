@@ -24,7 +24,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-df_train = pd.read_csv('.\\DataSource_backup\\sub_onetree_train.csv', encoding="utf-8")
+## old data:
+os.getcwd()
+df_train = pd.read_csv("../data/preprocessed/data_clean.csv", encoding = "utf-8")
 NLP_vis.words_count(df_train["clean_text"])
 
 # get source comments for further investigations
@@ -67,6 +69,7 @@ filename = datapath('train_bigram\\nb5_na04_bigram.pkl')
 with open(filename, "wb") as f:
     pickle.dump(train_bigram, f)
 
+## running again?
 X = bigram_vectorizer.transform(df_train['clean_text'].tolist())
 
 corpus = Sparse2Corpus(X, documents_columns=False)
@@ -76,6 +79,7 @@ NLP_vis.vocabulary_descriptive(filter_dict, corpus)
 
 # Logging Gensim's output
 # return time in seconds since the epoch
+os.chdir("../")
 log_file = os.getcwd() + r'\logging' + r'\log_%s.txt' % int(time.time())
 
 logging.basicConfig(filename=log_file,
@@ -122,6 +126,24 @@ def LdaGensim_topics(dictionary, corpus, limit, start, step, alpha, beta):
 
     return models
 
+## testing it 
+models = LdaGensim_topics(dictionary=filter_dict, corpus=corpus, 
+                                                         start=10, limit=11, step=10, 
+                                                         alpha = [1], 
+                                                         beta = [0.01])
+
+my_mod = models.get('a1_b0.01_k10')
+
+# visualize it 
+import pyLDAvis 
+import pyLDAvis.gensim ## wrapper
+
+pyLDAvis.enable_notebook()
+visualize = pyLDAvis.gensim.prepare(my_mod, corpus, filter_dict)
+pyLDAvis.display(visualize)
+
+my_mod.print_topics()
+## all of the combinations that she uses. 
 ## something like 640 combinations (40 * 4 * 4)
 models = LdaGensim_topics(dictionary=filter_dict, corpus=corpus, 
                                                          start=5, limit=201, step=5, 
