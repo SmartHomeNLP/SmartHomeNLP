@@ -153,8 +153,13 @@ def LdaGensim_topics(dictionary, corpus, limit, start, step, alpha, beta):
 #convert mallet model to lda
 model_gensim = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(model)
 #Visualize with LDAVis
+
+model_gensim.save("mallet_model") #save the model
+
+model_gensim = LdaModel.load("mallet_model") #load the model
+
 pyLDAvis.enable_notebook()
-vis = pyLDAvis.gensim.prepare(model_gensim, corpus, filter_dict)
+vis = pyLDAvis.gensim.prepare(model_gensim, corpus, filter_dict, sort_topics = False)
 pyLDAvis.display(vis)
 
 model_gensim.get_term_topics('security', minimum_probability=0.001)
