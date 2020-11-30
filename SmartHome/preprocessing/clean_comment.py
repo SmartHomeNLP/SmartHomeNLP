@@ -13,6 +13,7 @@ from nltk.stem import WordNetLemmatizer
 from sklearn.model_selection import train_test_split
 import html
 import timeit
+
 #import NLP_visualization as NLP_vis
 #import twokenize as ark
 #from spellchecker import SpellChecker
@@ -85,10 +86,10 @@ def get_english_words():
     nltk.download("words")
     return set(w.lower() for w in nltk.corpus.words.words())
 
+stop_words = get_stop_words()
+english_vocab = get_english_words()
 
 def clean_comment(comment, lemma=True, del_tags = ['NUM', 'PRON', 'ADV', 'DET', 'AUX', 'SCONJ', 'PART']):
-    num += 1 
-    if (num % 1000 == 0): print("1000 comments cleaned done")
     #comment = re.sub(r"(<SUB>|nan|<NEW TIER>|<SAME TIER>)", "", comment) #deleting the markers and nan, but we don't have any of these.
     comment = comment.lower() # should be heavily considered in terms of event detection as we will want to detect capitalized letters as a feature
     comment = re.sub(r'&#x200B', ' ', comment) # character code for a zero-width space
@@ -132,7 +133,7 @@ def clean_comment(comment, lemma=True, del_tags = ['NUM', 'PRON', 'ADV', 'DET', 
         # for token in comment_text:
         #     print(token.pos_, "\t", token)
         comment_token_list = [token.lemma_ for token in comment_text if token.pos_ not in del_tags]
-        print(f"Lemmatization: {(timeit.timeit() - start)/60} minutes")
+        #print(f"Lemmatization: {(timeit.timeit() - start)/60} minutes")
     # harsh to the root of the word
     else:
         comment_token_list = [word_rooter(word) for word in comment_token_list]

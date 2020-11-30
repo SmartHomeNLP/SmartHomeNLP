@@ -16,7 +16,7 @@ print("starting to concatenate submissions and comments")
 df = get_data(submissions, comments, filename = "data.csv")
 df.drop('link_id', inplace = True, axis = 1)
 stop = timeit.default_timer()
-print(f"it took: {(stop - start)/60} minutes to concatenating submissions and comments")
+print(f"it took: {(stop - start)/60} minutes to concatenate submissions and comments")
 
 start = timeit.default_timer()
 print("doing smaller cleaning tasks")
@@ -28,8 +28,6 @@ df.drop('text', inplace = True, axis = 1)
 df = hyphenate(df)
 
 ### GET STOP WORDS AND VOCAB
-stop_words = get_stop_words()
-english_vocab = get_english_words()
 stop = timeit.default_timer() 
 print(f"it took: {(stop - start)/60} minutes to do cleaning tasks")
 
@@ -54,6 +52,7 @@ print(f"it took: {(stop - start)/60} minutes to do cleaning tasks")
 # Apply function to clean the comment - maybe not needed.
 start = timeit.default_timer()
 print("starting clean the threads")
+num = 0
 df['clean_text'] = df.clean_text.apply(clean_comment)
 stop = timeit.default_timer() 
 print(f"it took {(stop-start)/60} minutes to clean the threads")
