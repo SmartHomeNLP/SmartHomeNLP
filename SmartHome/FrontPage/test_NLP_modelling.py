@@ -158,15 +158,14 @@ model_gensim = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(model)
 model_gensim.save("mallet_model") #save the model
 
 model_gensim = LdaModel.load("mallet_model") #load the model
-
+model_gensim.print_topics(20,10)
 pyLDAvis.enable_notebook()
-vis = pyLDAvis.gensim.prepare(model_gensim, corpus, filter_dict, sort_topics = False)
+vis = pyLDAvis.gensim.prepare(model_gensim, corpus, filter_dict, sort_topics = True)
 pyLDAvis.display(vis)
 
 model_gensim.get_term_topics('security', minimum_probability=0.001)
 model_gensim.get_term_topics('trust', minimum_probability=0.001)
 model_gensim.get_term_topics('privacy', minimum_probability=0.001)
-
 model_gensim.print_topics(20)
 
 #print('\nPerplexity:', model_gensim.log_perplexity(corpus))
