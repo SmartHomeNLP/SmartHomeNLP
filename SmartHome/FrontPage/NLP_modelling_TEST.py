@@ -20,13 +20,16 @@ from tmtoolkit.topicmod import evaluate, tm_lda
 import NLP_visualization as NLP_vis
 import clean_text as clean_fun
 from sklearn.feature_extraction.text import CountVectorizer
+# set up logging so we see what's going on
+import logging
+import os
+from gensim import corpora, models, utils
+logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-## old data:
-os.getcwd()
-df_train = pd.read_csv("../data/preprocessed/data_clean.csv", encoding = "utf-8")
+df_train = pd.read_csv('../data/preprocessed/data_clean.csv', encoding="utf-8")
 NLP_vis.words_count(df_train["clean_text"])
 
 # get source comments for further investigations
@@ -53,10 +56,11 @@ NLP_vis.vocabulary_descriptive(dictionary, corpus)
 filter_dict = copy.deepcopy(dictionary)
 filter_dict.filter_extremes(no_below=5, no_above=0.4) 
 NLP_vis.vocabulary_freq_words(filter_dict, False, 30)
+NLP_vis.vocabulary_freq_words(filter_dict, True, 30)
 
 # SAVE DICTIONARY
-tmp_file = datapath('vocabulary\\nb5_na04')
-filter_dict.save(tmp_file)
+tmp_file = datapath('vocabulary\\test_nb5_na04')
+filter_dict.save(tmp_file) ### NOTE: The file is relative to gensim and its test-data folder in your venv. Here you must create a new folder called "vocabulary" and "train_bigram"
 
 #Update corpus to the new dictionary
 bigram_vectorizer = CountVectorizer(ngram_range=(1, 2), token_pattern=r'\b\w+\b', 
@@ -69,7 +73,6 @@ filename = datapath('train_bigram\\nb5_na04_bigram.pkl')
 with open(filename, "wb") as f:
     pickle.dump(train_bigram, f)
 
-## running again?
 X = bigram_vectorizer.transform(df_train['clean_text'].tolist())
 
 corpus = Sparse2Corpus(X, documents_columns=False)
@@ -77,32 +80,10 @@ NLP_vis.vocabulary_descriptive(filter_dict, corpus)
 
 ## MODELS
 
-# Logging Gensim's output
-# return time in seconds since the epoch
-os.chdir("../")
-log_file = os.getcwd() + r'\logging' + r'\log_%s.txt' % int(time.time())
+mallet_path = 'C:/mallet/bin/mallet'
+'''
 
-logging.basicConfig(filename=log_file,
-                    format='%(asctime)s : %(levelname)s : %(message)s',
-                    level=logging.INFO)
-
-
-def LdaGensim_topics(dictionary, corpus, limit, start, step, alpha, beta):
-    '''
-    Parameters:
-    ---------
-    dictionary: Gensim dictionary
-    corpus: Gensim corpus
-    limit: max num of topics (end at limit -1)
-    start: min number of topics
-    step: increment between each integer
-    alpha: list of prior on the per-document topic distribution.
-    eta: list of prior on the per-topic word distribution. 
-
-    Returns:
-    ---------
-    model_list: list of LDA topic
-    '''
+def mallet_fun(path, corpus, dictionary, start, step, alpha, eta):
 
     # initialize an empty dictionary
     models = {}
@@ -125,46 +106,38 @@ def LdaGensim_topics(dictionary, corpus, limit, start, step, alpha, beta):
                 print('\n')
 
     return models
+'''
+## timing it: 
+import timeit
 
-## testing it 
-models = LdaGensim_topics(dictionary=filter_dict, corpus=corpus, 
-                                                         start=10, limit=11, step=10, 
-                                                         alpha = [1], 
-                                                         beta = [0.01])
+def mallet_fun(path, corpus, dictionary, workers):
+    mods = {}
+    for i in workers: 
+        start = timeit.default_timer() 
+        print(f"starting with workers {i}")
+        model = models.wrappers.LdaMallet(path, corpus, num_topics = 10, id2word = dictionary, alpha = 20, workers = i)
+        name = "workers{0}".format(workers)
+        end = timeit.default_timer() 
+        print(f"it took {(end-start)/60} minutes to run worker {i}")
+        mods[name] = model 
+    return mods
 
-my_mod = models.get('a1_b0.01_k10')
+mods = mallet_fun(path = mallet_path, corpus = corpus, dictionary = filter_dict, workers = [1, -1])
 
-# visualize it 
-import pyLDAvis 
-import pyLDAvis.gensim ## wrapper
+print(f"starting LDA-mallet")
+model = models.wrappers.LdaMallet(mallet_path, corpus, num_topics=20, id2word=filter_dict, alpha=20)
+end = timeit.default_timer() 
+print()
 
-pyLDAvis.enable_notebook()
-visualize = pyLDAvis.gensim.prepare(my_mod, corpus, filter_dict)
-pyLDAvis.display(visualize)
+model.print_topics(num_topics=20, num_words=10)
 
-my_mod.print_topics()
-## all of the combinations that she uses. 
-## something like 640 combinations (40 * 4 * 4)
-models = LdaGensim_topics(dictionary=filter_dict, corpus=corpus, 
-                                                         start=5, limit=201, step=5, 
-                                                         alpha = [0.01, 0.1, 1, 10], 
-                                                         beta = [0.01, 0.1, 1, 10])
+import pyLDAvis
+import pyLDAvis.gensim
 
+# Logging Gensim's output
+# return time in seconds since the epoch
+log_file = os.getcwd() + r'\logging' + r'\log_%s.txt' % int(time.time())
 
-# [0.01, 0.05, 0.1, 0.5, 1, 5, 10, 50] triggered insufficient memory on RDP server.
-#time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1585905944))
-
-# SAVE MODELS
-# Write pickles incrementally to a file 
-# One pickles equal to a combination of alpha beta across all number of topics)
-
-# Divide by groups of 40 (num of topics)
-num = 0
-for i in range(40, len(models)+40, 40):
-    keys_list = list(models.keys())[num:i]
-    tmp_file = datapath('train_models\\nb5_na04_{}models.pkl').format(re.sub(r"\.", "", re.findall(".*_", keys_list[0])[0]))
-    with open(tmp_file, "wb") as handle:
-        pickle.dump({k: v for k, v in models.items() if k in keys_list}, handle)
-    num = i
-
-
+logging.basicConfig(filename=log_file,
+                    format='%(asctime)s : %(levelname)s : %(message)s',
+                    level=logging.INFO)

@@ -56,6 +56,7 @@ NLP_vis.vocabulary_descriptive(dictionary, corpus)
 filter_dict = copy.deepcopy(dictionary)
 filter_dict.filter_extremes(no_below=5, no_above=0.4) 
 NLP_vis.vocabulary_freq_words(filter_dict, False, 30)
+NLP_vis.vocabulary_freq_words(filter_dict, True, 30)
 
 # SAVE DICTIONARY
 tmp_file = datapath('vocabulary\\test_nb5_na04')
