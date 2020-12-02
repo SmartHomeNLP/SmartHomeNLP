@@ -14,7 +14,8 @@ import pandas as pd
 import seaborn as sns
 from gensim.matutils import corpus2csc, Sparse2Corpus
 from gensim.models import LdaModel, LdaMulticore
-#from gensim.models.wrappers import LdaMallet
+from gensim.models.wrappers import LdaMallet #easier?
+from gensim.models.coherencemodel import CoherenceModel #needed
 from gensim.test.utils import datapath
 from tmtoolkit.topicmod import evaluate, tm_lda
 import NLP_visualization as NLP_vis
@@ -110,6 +111,7 @@ def mallet_fun(path, corpus, dictionary, start, step, alpha, eta):
 ## timing it: 
 import timeit
 
+## gives a weird error for the last model. 
 def mallet_fun(path, corpus, dictionary, workers):
     mods = {}
     for i in workers: 
@@ -122,14 +124,69 @@ def mallet_fun(path, corpus, dictionary, workers):
         mods[name] = model 
     return mods
 
-mods = mallet_fun(path = mallet_path, corpus = corpus, dictionary = filter_dict, workers = [1, -1])
+mods = mallet_fun(path = mallet_path, corpus = corpus, dictionary = filter_dict, workers = [4, -1])
 
-print(f"starting LDA-mallet")
-model = models.wrappers.LdaMallet(mallet_path, corpus, num_topics=20, id2word=filter_dict, alpha=20)
+## running with 4 workers 
+start = timeit.default_timer() 
+print(f"starting with workers 4")
+model = models.wrappers.LdaMallet(mallet_path, corpus, num_topics= 10, id2word=filter_dict, alpha=20, workers = 4)
 end = timeit.default_timer() 
-print()
+print(f"it took {(end-start)/60} minutes to run worker 4")
 
-model.print_topics(num_topics=20, num_words=10)
+## running with optimize_interval 
+start = timeit.default_timer() 
+print(f"starting with workers 4")
+model_optim = models.wrappers.LdaMallet(mallet_path, corpus, num_topics= 10, optimize_interval = 10, id2word=filter_dict, alpha=20, workers = 4)
+end = timeit.default_timer() 
+print(f"it took {(end-start)/60} minutes to run worker 4")
+model_optim.print_topcis
+
+## check the two models 
+model.print_topics(num_topics = 10, num_words = 10)
+model_optim.print_topics(num_topics = 10, num_words = 10)
+
+## convert to gensim: 
+mod_gensim = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(model)
+mod_optim = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(model_optim)
+mod_optim
+
+## coherence scores. 
+## consider which coherence score.. (u_mass should be fast):
+mod_cm = CoherenceModel(model=mod_gensim, corpus=corpus, coherence='u_mass')
+mod_coherence = mod_cm.get_coherence() 
+
+mod_optim_cm = CoherenceModel(model=model_optim, corpus=corpus, coherence='u_mass')
+opt_coherence = mod_optim_cm.get_coherence() 
+
+mod_coherence
+opt_coherence
+
+## coherence score c_v (multiprocessing issue)
+def main():
+
+    ## data 
+    texts = df_train['clean_text'].tolist()
+
+    ## models 
+    ## should corpus be included? (not clear)
+    cv_optim = CoherenceModel(model=model_optim, texts=texts, corpus = corpus, dictionary=filter_dict, coherence='c_v')
+    cv_nonoptim = CoherenceModel(model=mod_gensim, texts=texts, corpus = corpus, dictionary=filter_dict, coherence='c_v')
+
+    ## get coherence
+    print(cv_nonoptim.get_coherence())
+    print(cv_optim.get_coherence())
+
+if __name__=='__main__':
+    main()
+
+## checking hyperparameters: 
+model_optim.alpha
+model_optim.print_topic(5)
+model_optim.iterations
+model_optim.topic_threshold
+model_optim.eta
+model.alpha
+mod_gensim.eta
 
 import pyLDAvis
 import pyLDAvis.gensim
