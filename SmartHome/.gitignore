@@ -15,4 +15,5 @@ logging
 evaluation_metrics
 Evaluation
 data/preprocessed
+models/corpus.pkl
 __pycache__

@@ -5,3 +5,4 @@
 /SmartHome/tf
 /SmartHome/tfhub_models
 /SmartHome/data/preprocessed
+/SmartHome/models/corpus.pkl

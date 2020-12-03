@@ -21,12 +21,12 @@ from tmtoolkit.topicmod import evaluate, tm_lda
 import NLP_visualization as NLP_vis
 import clean_text as clean_fun
 from sklearn.feature_extraction.text import CountVectorizer
-# set up logging so we see what's going on
 import logging
 import os
 from gensim import corpora, models, utils
-logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
 
+## logging and warnings 
+logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -42,7 +42,7 @@ bigram_vectorizer = CountVectorizer(ngram_range=(1, 2), token_pattern=r'\b\w+\b'
 
 X = bigram_vectorizer.fit_transform(df_train['clean_text'].tolist())
 
-term2id = bigram_vectorizer.vocabulary_
+term2id = bigram_vectorizer.vocabulary_ #now becomes dict
 
 # get gensim dictionary
 # https://stackoverflow.com/questions/21552518/using-scikit-learn-vectorizers-and-vocabularies-with-gensim
@@ -55,9 +55,10 @@ NLP_vis.vocabulary_descriptive(dictionary, corpus)
 
 # Filter out words that occur less than 5 comments, or more than 40% of comments
 filter_dict = copy.deepcopy(dictionary)
-filter_dict.filter_extremes(no_below=5, no_above=0.4) 
+filter_dict.filter_extremes(no_below=4, no_above=0.4) 
 NLP_vis.vocabulary_freq_words(filter_dict, False, 30)
 NLP_vis.vocabulary_freq_words(filter_dict, True, 30)
+NLP_vis.vocabulary_descriptive(filter_dict, corpus)
 
 # SAVE DICTIONARY
 tmp_file = datapath('vocabulary\\test_nb5_na04')
