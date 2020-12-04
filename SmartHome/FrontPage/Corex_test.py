@@ -1,6 +1,7 @@
 import numpy as np
 import scipy.sparse as ss
 import matplotlib.pyplot as plt
+import pandas as pd
 
 from corextopic import corextopic as ct
 from corextopic import vis_topic as vt # jupyter notebooks will complain matplotlib is being loaded twice
@@ -45,7 +46,9 @@ print(topic_model.tc)
 
 ## Anchoring around security, trust and privacy:
 
-anchor_words = ["security", ["security", "data"], ["security", "alarm"], ["security", "trust", "privacy"]]
+#anchor_words = ["security", ["security", "data"], ["security", "alarm"], ["security", "trust", "privacy"]]
+
+anchor_words = [["security", "data"], ["security", "door"], "privacy", "trust"]
 
 anchored_topic_model = ct.Corex(n_hidden=20, seed=2)
 anchored_topic_model.fit(doc_word, words=words, anchors=anchor_words, anchor_strength=4);
