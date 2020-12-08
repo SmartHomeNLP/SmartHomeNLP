@@ -282,39 +282,17 @@ df = pd.read_csv("../data/preprocessed/data_all.csv")
 
 subset = df.head(10)
 
-clean_comment_progress(df, "text")
+#clean_comment_progress(df, "text")
 
 #NEW STRATEGY: MULTIPROCESSING
 ## NOTE: To do this in parallel, we have to use the old method :/
 
 import multiprocessing as mp
 
-pool = mp.Pool(5)
-results = [pool.apply(clean_comment, args = row) for row in subset["text"].values]
+pool = mp.Pool(2)
+results = pool.map(clean_comment, subset["text"].values)
+#results = [pool.apply(clean_comment, args = row) for row in subset["text"].values]
 pool.close()
 print(results)
 
-
-from multiprocessing import Pool
-def f(x):
-    time.sleep(2) # Wait 2 seconds
-    print(x*x)
-p = Pool(8)
-p.map(f, [1, 2, 3, 4])
-p.close()
-p.join()
-
-
 ## EXPERIMENTING WITH THE SPECIFIC SYNTAX:
-
-def main():
-    values = subset["text"].values
-
-    with mp.get_context("spawn").Pool(processes = 5) as pool:
-        print("is anything happening?")
-        data = pool.map(clean_comment, subset["text"].values)
-    
-    return data
-        
-main()
-#clean_comment(subset, "text")
