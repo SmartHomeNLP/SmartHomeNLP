@@ -65,6 +65,10 @@ NLP_vis.vocabulary_freq_words(filter_dict_100K, False, 30)
 NLP_vis.vocabulary_freq_words(filter_dict_100K, True, 30)
 NLP_vis.vocabulary_descriptive(filter_dict_100K, corpus)
 
+type(filter_dict_100K)
+all_words = ' '.join([text for text in filter_dict_100K])
+
+
 #Update corpus to the new dictionary
 bigram_vectorizer_100K = CountVectorizer(ngram_range=(1, 2), token_pattern=r'\b\w+\b', 
                                     vocabulary={term:id_ for (id_, term) in filter_dict_100K.items()})
