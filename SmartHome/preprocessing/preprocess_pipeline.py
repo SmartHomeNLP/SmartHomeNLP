@@ -1,10 +1,11 @@
-from concat_files import get_data
+from concat_files import *
 from clean_comment import *
+import pandas as pd
 import timeit
 
 global_start = timeit.default_timer()
-comments = pd.read_csv('../data/preprocessed/comments_nobots.csv')
-submissions = pd.read_csv('../data/preprocessed/submissions_nobots.csv')
+#comments = pd.read_csv('../data/preprocessed/comments_nobots.csv')
+#submissions = pd.read_csv('../data/preprocessed/submissions_nobots.csv')
 
 ## unique: 
 submissions.drop_duplicates(keep = "first", inplace = True) 
@@ -13,6 +14,7 @@ comments.drop_duplicates(keep = "first", inplace = True)
 start = timeit.default_timer()
 print("starting to concatenate submissions and comments")
 ### CONCAT SUBMISSIONS AND COMMENTS:
+df = pd.read_csv("../data/preprocessed/data_all.csv")
 df = get_data(submissions, comments, filename = "data.csv")
 df.drop('link_id', inplace = True, axis = 1)
 stop = timeit.default_timer()
@@ -59,6 +61,8 @@ print(f"it took {(stop-start)/60} minutes to clean the threads")
 
 df = drop_rows(df)
 
-df.to_csv("../data/preprocessed/data_clean.csv", index = False)
+df.to_csv("../data/preprocessed/data_new_clean.csv", index = False)
 global_end = timeit.default_timer()
 print(f"it took {(global_end - global_start)/60} minutes to run the whole damn thing")
+
+df["text"].values

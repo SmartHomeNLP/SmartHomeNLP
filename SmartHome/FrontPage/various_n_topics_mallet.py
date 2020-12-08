@@ -121,7 +121,7 @@ models
 os.getcwd()
 
 ## pickle saving corpus
-with open('C:\\Users\\95\\Dropbox\\MastersSem1\\NLP\\SmartHome\\SmartHomeNLP\\SmartHome\\models\\corpus.pkl', 'wb') as corpus:
+with open('../models/corpus.pkl', 'wb') as corpus:
     pickle.dump(corpus_100K, corpus)
 
 ## open it again 

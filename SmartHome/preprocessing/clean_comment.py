@@ -189,7 +189,194 @@ def drop_rows(df):
     df = df.loc[df['clean_text'].map(lambda x: len(str(x).strip().split())) > 15,]
     print(f"No. rows after dropping strings < length 15: {len(df)}")
     return df
-# Descriptive visualization
-#NLP_vis.freq_words(df["clean_text"], True, 50) ## NOTE: Much of the preprocessing steps and whether they fail can be gleened from reviewing these 
-#NLP_vis.words_count(df["clean_text"])
 
+
+### TESTING PROGRESS BAR AND PARALLEL PROCESSING:
+# IT SIMPLY TAKES TOO LONG
+
+from tqdm import tqdm
+
+iterator_size = 10000
+
+with tqdm(total=iterator_size) as progress_bar:
+     for row in tqdm(range(iterator_size)):
+        progress_bar.update(1)
+
+## WORKS WITH THIS SETUP:
+### LET'S MAKE THE FUNCTION DO EVERYTHING INSTEAD OF BEING A MAP FUNCTION
+### WORKS WITH THE TIMER. CAN IT WORK WITH THE PARALLEL CRAZINESS?!
+
+#from numba import jit, cuda 
+
+#@jit(nopython = False)
+def clean_comment(df, text_column, lemma=True, del_tags = ['NUM', 'PRON', 'ADV', 'DET', 'AUX', 'SCONJ', 'PART']):
+    comments = df[text_column].values #get values out as array
+    iterator_size = len(comments)
+    data = []
+    with tqdm(total=iterator_size) as progress_bar:
+        for comment in tqdm(comments):
+            #comment = re.sub(r"(<SUB>|nan|<NEW TIER>|<SAME TIER>)", "", comment) #deleting the markers and nan, but we don't have any of these.
+            comment = comment.lower() # should be heavily considered in terms of event detection as we will want to detect capitalized letters as a feature
+            comment = re.sub(r'&#x200B', ' ', comment) # character code for a zero-width space
+            comment = re.sub(r'remindme![\w\s\W]*$', ' ', comment) # remove call to remind me bot
+            comment = re.sub(r'\n', ' ', comment) # remove new line formatting
+            comment = re.sub(r'(\[deleted\]|\[removed\])', '', comment)
+            comment = re.sub(r"[^\w\s]", ' ', comment) # punctuation and emoji
+            comment = re.sub(r'(\s_|_\s)', '', comment) # remove underscores around a words (italics)
+            comment = re.sub(r"_", " ", comment) #replace underscores with space
+            comment = re.sub(r"[\d]+", "", comment) #remove digits
+
+            #print(f"Substitutions: {(timeit.timeit() - start)/60} minutes")
+            #seems like this could be speeded up:
+            # ______________________
+
+            # detect no english comments and remove them 
+            #nltk.download('words')
+            text_vocab = set(w for w in comment.strip().split() if w.isalpha())
+            unusual = text_vocab.difference(english_vocab) 
+
+            # empty comments where 70% words not english, slangs, deleted
+            try:
+                if len(unusual)/len(text_vocab) > 0.7:
+                    comment = ''
+            except ZeroDivisionError:
+                pass
+            
+            #print(f"Language/slang detection: {(timeit.timeit() - start)/60} minutes")
+            # remove stop_words
+            comment_token_list = [word for word in comment.strip().split() if word not in stop_words and len(word)>1]
+
+            #print(f"Stopwords removal: {(timeit.timeit() - start)/60} minutes")
+            # ________________________
+
+            # keeps word meaning: important to infer what the topic is about
+            if lemma == True:
+                # Initialize spacy 'en' model
+                nlp = spacy.load('en_core_web_sm')
+                # https://spacy.io/api/annotation
+                comment_text = nlp(' '.join(comment_token_list))
+                # for token in comment_text:
+                #     print(token.pos_, "\t", token)
+                comment_token_list = [token.lemma_ for token in comment_text if token.pos_ not in del_tags]
+                #print(f"Lemmatization: {(timeit.timeit() - start)/60} minutes")
+            # harsh to the root of the word
+            else:
+                comment_token_list = [word_rooter(word) for word in comment_token_list]
+
+            comment = ' '.join(comment_token_list)
+
+            #print(f"Join strings: {(timeit.timeit() - start)/60} minutes")
+
+            #NOTE digits within string
+
+            data.append(comment)
+            progress_bar.update(1)
+    print("DONE! MUTATING NEW COLUMND WITH CLEAN TEXT:")
+    df["clean_text"] = data
+    
+    return df
+
+## VERSION THAT DOESN'T DO ANYTHING TO DF:
+
+def clean_comment(df, text_column, lemma=True, del_tags = ['NUM', 'PRON', 'ADV', 'DET', 'AUX', 'SCONJ', 'PART']):
+    #comments = df[text_column].values #get values out as array
+    #iterator_size = len(comments)
+    #data = []
+    #with tqdm(total=iterator_size) as progress_bar:
+        #for comment in tqdm(comments):
+            #comment = re.sub(r"(<SUB>|nan|<NEW TIER>|<SAME TIER>)", "", comment) #deleting the markers and nan, but we don't have any of these.
+    comment = comment.lower() # should be heavily considered in terms of event detection as we will want to detect capitalized letters as a feature
+    comment = re.sub(r'&#x200B', ' ', comment) # character code for a zero-width space
+    comment = re.sub(r'remindme![\w\s\W]*$', ' ', comment) # remove call to remind me bot
+    comment = re.sub(r'\n', ' ', comment) # remove new line formatting
+    comment = re.sub(r'(\[deleted\]|\[removed\])', '', comment)
+    comment = re.sub(r"[^\w\s]", ' ', comment) # punctuation and emoji
+    comment = re.sub(r'(\s_|_\s)', '', comment) # remove underscores around a words (italics)
+    comment = re.sub(r"_", " ", comment) #replace underscores with space
+    comment = re.sub(r"[\d]+", "", comment) #remove digits
+
+    #print(f"Substitutions: {(timeit.timeit() - start)/60} minutes")
+    #seems like this could be speeded up:
+    # ______________________
+
+    # detect no english comments and remove them 
+    #nltk.download('words')
+    text_vocab = set(w for w in comment.strip().split() if w.isalpha())
+    unusual = text_vocab.difference(english_vocab) 
+
+    # empty comments where 70% words not english, slangs, deleted
+    try:
+        if len(unusual)/len(text_vocab) > 0.7:
+            comment = ''
+    except ZeroDivisionError:
+        pass
+    
+    #print(f"Language/slang detection: {(timeit.timeit() - start)/60} minutes")
+    # remove stop_words
+    comment_token_list = [word for word in comment.strip().split() if word not in stop_words and len(word)>1]
+
+    #print(f"Stopwords removal: {(timeit.timeit() - start)/60} minutes")
+    # ________________________
+
+    # keeps word meaning: important to infer what the topic is about
+    if lemma == True:
+        # Initialize spacy 'en' model
+        nlp = spacy.load('en_core_web_sm')
+        # https://spacy.io/api/annotation
+        comment_text = nlp(' '.join(comment_token_list))
+        # for token in comment_text:
+        #     print(token.pos_, "\t", token)
+        comment_token_list = [token.lemma_ for token in comment_text if token.pos_ not in del_tags]
+        #print(f"Lemmatization: {(timeit.timeit() - start)/60} minutes")
+    # harsh to the root of the word
+    else:
+        comment_token_list = [word_rooter(word) for word in comment_token_list]
+
+    comment = ' '.join(comment_token_list)
+
+            #print(f"Join strings: {(timeit.timeit() - start)/60} minutes")
+
+            #NOTE digits within string
+
+            #data.append(comment)
+            #progress_bar.update(1)
+    #print("DONE! MUTATING NEW COLUMND WITH CLEAN TEXT:")
+    #df["clean_text"] = data
+    
+    return df
+
+## QUICK CHECK ON A SUBSET OF THE DATA:
+
+df = pd.read_csv("../data/preprocessed/data_all.csv")
+
+subset = df.head(10)
+
+clean_comment(subset, "text")
+
+#NEW STRATEGY: MULTIPROCESSING
+
+import multiprocessing as mp
+
+from multiprocessing import Pool
+def f(x):
+    time.sleep(2) # Wait 2 seconds
+    print(x*x)
+p = Pool(8)
+p.map(f, [1, 2, 3, 4])
+p.close()
+p.join()
+
+
+## EXPERIMENTING WITH THE SPECIFIC SYNTAX:
+
+def main():
+    values = subset["text"].values
+
+    with mp.get_context("spawn").Pool(processes = 5) as pool:
+        print("is anything happening?")
+        data = pool.map(clean_comment, subset["text"].values)
+    
+    return data
+        
+main()
+#clean_comment(subset, "text")
