@@ -17,6 +17,7 @@ from nltk.stem import WordNetLemmatizer
 import os 
 import glob
 import timeit
+from tqdm import tqdm
 
 #test = pd.read_csv("../data/preprocessed/data_all.csv")
 
@@ -71,7 +72,7 @@ def get_data_extended(submissions, comments, filename = ""):
     link_id_array = []
     dictionary = {"text_array": text_array, "thread_array": thread_array,"link_id_array": link_id_array, "tree_array": tree_array, "is_sub_array": is_sub_array}
 
-    for thread, link_id in enumerate(submissions.loc[:, "link_id"].unique()):
+    for thread, link_id in enumerate(tqdm(submissions.loc[:, "link_id"].unique())):
         org_text = str(submissions[submissions["link_id"] == link_id].values[0][2]) + " "
         if str(submissions[submissions["link_id"] == link_id].values[0][3]) != "nan":
             org_text += str(submissions[submissions["link_id"] == link_id].values[0][3])
