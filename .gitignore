@@ -4,5 +4,4 @@
 /SmartHome/old
 /SmartHome/tf
 /SmartHome/tfhub_models
-/SmartHome/data/preprocessed
-/SmartHome/data/models
+/SmartHome/data

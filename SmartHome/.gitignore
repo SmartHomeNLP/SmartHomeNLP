@@ -14,6 +14,5 @@ preprocessed_comments.csv
 logging
 evaluation_metrics
 Evaluation
-data/preprocessed
-data/models
+data
 __pycache__

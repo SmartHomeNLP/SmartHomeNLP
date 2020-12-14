@@ -1,48 +1,27 @@
-#from concat_files import *
-from clean_comment import *
-import pandas as pd
-import timeit
+## import from the functions document:
+from functions import * 
 
-global_start = timeit.default_timer()
-#comments = pd.read_csv('../data/preprocessed/comments_nobots.csv')
-#submissions = pd.read_csv('../data/preprocessed/submissions_nobots.csv')
+## merge submissions
+merge_submissions() 
 
-## unique: 
-#submissions.drop_duplicates(keep = "first", inplace = True) 
-#comments.drop_duplicates(keep = "first", inplace = True)
+## merge comments 
+merge_comments() 
 
-start = timeit.default_timer()
-print("starting to concatenate submissions and comments")
-### CONCAT SUBMISSIONS AND COMMENTS:
-df = pd.read_csv("../data/preprocessed/data_all.csv")
-df.drop_duplicates(keep = "first", inplace = True)
-#df = get_data(submissions, comments, filename = "data.csv")
-#df.drop('link_id', inplace = True, axis = 1)
-stop = timeit.default_timer()
-print(f"it took: {(stop - start)/60} minutes to concatenate submissions and comments")
+## clean bots 
+## use manual = True the first time. 
+bot_clean(manual = False, done = True) 
 
-start = timeit.default_timer()
-print("doing smaller cleaning tasks")
-### REMOVE HTML 
-df = remove_html(df)
-df.drop('text', inplace = True, axis = 1)
+## concatenate data
+concat_data(done = True) ## important to keep this name
 
-### CONCAT WORDS WITH HYPHENS IN BETWEEN
-df = hyphenate(df)
+## smaller cleaning tasks
+small_cleaning(done = True)
 
-### GET STOP WORDS AND VOCAB
-stop = timeit.default_timer() 
-print(f"it took: {(stop - start)/60} minutes to do cleaning tasks")
+## more cleaning tasks 
+clean_comment(done = True)
 
-## APPLY FUNCTION TO COMMENT
-start = timeit.default_timer()
-print("starting clean the threads")
-df = clean_comment(df, "clean_text")
-stop = timeit.default_timer() 
-print(f"it took {(stop-start)/60} minutes to clean the threads")
+## specific cleaning for different purposes: 
+#  get accepts: ['thread', 'tree'] as arguments. 
+H1_preprocess(get = ['thread', 'tree'], done = False) 
 
-df = drop_rows(df)
-
-df.to_csv("../data/preprocessed/data_new_clean.csv", index = False)
-global_end = timeit.default_timer()
-print(f"it took {(global_end - global_start)/60} minutes to run the whole damn thing")
+## you are done! :) 
