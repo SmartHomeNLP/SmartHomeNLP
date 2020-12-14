@@ -112,12 +112,7 @@ def drop_rows(df):
 from tqdm import tqdm
 
 ## WORKS WITH THIS SETUP:
-### LET'S MAKE THE FUNCTION DO EVERYTHING INSTEAD OF BEING A MAP FUNCTION
-### WORKS WITH THE TIMER. CAN IT WORK WITH THE PARALLEL CRAZINESS?!
 
-#from numba import jit, cuda 
-
-#@cuda.jit(nopython = False)
 def clean_comment(df, text_column, lemma=True, del_tags = ['NUM', 'PRON', 'ADV', 'DET', 'AUX', 'SCONJ', 'PART']):
     comments = df[text_column].values #get values out as array
     iterator_size = len(comments)
