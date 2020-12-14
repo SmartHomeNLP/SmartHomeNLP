@@ -68,7 +68,7 @@ def merge_submissions():
     new_frame = pd.concat(new_sub, axis=0, ignore_index=True)
 
     ### read all of the old submissions 
-    old_frame = pd.read_csv('../DataSource_backup/reddit_submissions.csv')
+    old_frame = pd.read_csv('../data/raw/reddit_submissions.csv')
 
     ### creating link_id by inserting t3_ to the beginning of id. 
     new_frame = new_frame.assign(link_id = lambda x: "t3_" + x.id)
@@ -106,7 +106,7 @@ def merge_comments():
         new_comment.append(df)
 
     
-    original_comments = pd.read_csv("../DataSource_backup/reddit_comments.csv")
+    original_comments = pd.read_csv("../data/raw/reddit_comments.csv")
 
     # as integeres: 
     original_comments["score"] = original_comments["score"].apply(lambda x: int(x))
