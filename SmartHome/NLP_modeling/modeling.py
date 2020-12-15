@@ -52,7 +52,6 @@ def main(filename, corpus_name, dct_name):
                             alpha = alpha, 
                             eta = eta)
 
-
     ## pickle saving models: 
     filename = f'../data/models/{filename}.pkl'
     with open(filename, 'wb') as mods:
