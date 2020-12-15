@@ -15,23 +15,20 @@ from gensim.test.utils import datapath
 from gensim.matutils import corpus2csc
 #import NLP_visualization as NLP_vis
 from gensim.matutils import corpus2csc, Sparse2Corpus
+from tqdm import tqdm
 
-def main(): 
+input_tuple = ("H1_thread_eval_b01", "H1_thread_models_b01", "H1_thread_corpus", "H1_thread_dct")
 
-    ## data:
-    print("loading stuff")
-    with open("../data/modeling/H2submissions.pkl", "rb") as f:
-        data = pickle.load(f)
+def main(filename, model_name, corpus_name, dct_name): 
 
-    with open("../data/modeling/H2corpus.pkl", "rb") as f: 
+    with open(f"../data/modeling/{corpus_name}.pkl", "rb") as f: 
         corpus = pickle.load(f) 
 
-    with open("../data/modeling/H2dictionary.pkl", "rb") as f: 
+    with open(f"../data/modeling/{dct_name}.pkl", "rb") as f: 
         dictionary = pickle.load(f) 
 
-    with open('../data/modeling/H2models-b01.pkl', "rb") as f: 
+    with open(f'../data/models/{model_name}.pkl', "rb") as f: 
         models = pickle.load(f)
-    print("finished loading")
 
     ## preprocess txt: 
     def corpus2token_text(corpus, dictionary):
@@ -51,8 +48,8 @@ def main():
     eta = []
     n_topics = [] 
 
-    for i in models:
-                print("Calculate Coherence gensim cv in {}...".format(i))
+    for i in tqdm(models):
+                print(f"Calculate Coherence gensim cv in model: {i}")
                 coherencemodel = CoherenceModel(model = models[i], texts = txt,
                                                 dictionary = dictionary, coherence = 'c_v')
                 coherence_gensim_c_v.append(coherencemodel.get_coherence())
@@ -68,8 +65,8 @@ def main():
     data = pd.DataFrame(dct)
 
     ## write stuff: 
-    with open('../data/evaluation/eval_metrics.pkl', 'wb') as f:
+    with open(f'../data/evaluation/{filename}.pkl', 'wb') as f:
             pickle.dump(data, f)
 
 if __name__ == '__main__': 
-    main()
+    main(*input_tuple)

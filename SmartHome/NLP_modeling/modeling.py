@@ -47,11 +47,10 @@ def main(filename, corpus_name, dct_name):
     models = LdaMulti_topics(dictionary=dct, 
                             corpus=corpus,
                             start = 5, 
-                            limit = 6, 
+                            limit = 51, 
                             step = 5, 
                             alpha = alpha, 
                             eta = eta)
-
 
     ## pickle saving models: 
     filename = f'../data/models/{filename}.pkl'
