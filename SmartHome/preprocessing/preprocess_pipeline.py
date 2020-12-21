@@ -22,6 +22,6 @@ clean_comment(done = True)
 
 ## specific cleaning for different purposes: 
 #  get accepts: ['thread', 'tree'] as arguments. 
-H1_preprocess(get = ['thread', 'tree'], done = False) 
+H1_preprocess(get = ['submission'], done = False) 
 
 ## you are done! :) 
