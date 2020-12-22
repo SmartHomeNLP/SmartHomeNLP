@@ -47,7 +47,7 @@ def main(filename, corpus_name, dct_name):
     models = LdaMulti_topics(dictionary=dct, 
                             corpus=corpus,
                             start = 5, 
-                            limit = 51, 
+                            limit = 101, 
                             step = 5, 
                             alpha = alpha, 
                             eta = eta)
