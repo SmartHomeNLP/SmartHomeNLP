@@ -502,15 +502,22 @@ def H1_preprocess(get = [], done = False):
         with open("../data/clean/H1_tree.pkl", 'wb') as H1_tree:
             pickle.dump(res, H1_tree)
             
-'''
+
     if "submission" in get: 
-        index = data["sub"].values
-        text_clean = data["clean_text"].values
-        text_clean = [text_clean[i] for i in range(len(text_clean)) if index[i] == 1]
-        text_org = data["text"].values 
-        text_org = [text_org[i] for i in range(len(text_org)) if index[i] == 1]
-        res["clean_text"] = text_clean
-        res["org_text"] = text_org
+        res = pd.DataFrame()
+        clean_texts = []
+        org_texts = []
+
+        for i in tqdm(set(data["thread"].values)):
+            subset = data[data["thread"] == i]
+            subset = subset[(subset['op_comment'] == 1) | (subset['sub'] == 1)]
+            text_org = " ".join(subset["text"].values)
+            text_clean = " ".join(subset["clean_text"].values)
+            clean_texts.append(text_clean)
+            org_texts.append(text_org)
+
+        dct = {"clean_text": clean_texts, "org_text": org_texts}
+        res = pd.DataFrame(dct)
+
         with open("../data/clean/H2_submissions.pkl", 'wb') as H2_sub:
             pickle.dump(res, H2_sub)
-'''

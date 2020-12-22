@@ -1,3 +1,3 @@
 from functions import * 
 
-corpus_dct_gen(names = ["H1_thread", "H1_tree"], done = False)
+corpus_dct_gen(names = ["H2_submissions"], done = False)

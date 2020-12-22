@@ -14,7 +14,11 @@ from multiprocessing import Process, freeze_support
 import threading
 from functions import LdaMulti_topics #the main model
 
+<<<<<<< HEAD
 input_tuple = ("H1_tree_models", "H1_tree_corpus", "H1_tree_dct")
+=======
+input_tuple = ("H2_submissions_b0.1_a0.01", "H2_submissions_corpus", "H2_submissions_dct")
+>>>>>>> 5e80c01872f58e6ba6e157e06f4213fabe15bf11
 
 ## main function: 
 def main(filename, corpus_name, dct_name): 

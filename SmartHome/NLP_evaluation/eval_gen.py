@@ -17,7 +17,7 @@ from gensim.matutils import corpus2csc
 from gensim.matutils import corpus2csc, Sparse2Corpus
 from tqdm import tqdm
 
-input_tuple = ("H1_tree_eval_b01", "H1_tree_models", "H1_tree_corpus", "H1_tree_dct")
+input_tuple = ("H2_submissions_eval_b0.1_a0.01", "H2_submissions_b0.1_a0.01", "H2_submissions_corpus", "H2_submissions_dct")
 
 def main(filename, model_name, corpus_name, dct_name): 
 
