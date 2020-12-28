@@ -5,35 +5,67 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pickle
 import seaborn as sns 
-
-with open(f"../data/evaluation/H1_thread_eval_b0.1_b1.pkl", "rb") as f:
-        H2evaluation1 = pickle.load(f)
-
-with open(f"../data/evaluation/H1_thread_eval_b0.01.pkl", "rb") as f:
-        H2evaluation2 = pickle.load(f)
-
-dots = sns.load_dataset("dots")
-dots.head(2)
-total = H2evaluation1.append(H2evaluation2)
-total.dtypes
-total
-
-## seaborn 
-# https://seaborn.pydata.org/examples/faceted_lineplot.html
-sns.set_theme(style="ticks")
-palette = sns.color_palette("rocket_r")
-sns.relplot(
-    data = total,
-    x = "topics", y = "coherence",
-    hue = "alpha", size="alpha", col = "eta",
-    kind = "line", size_order=["0.01", "0.1", "1.0"],
-    height=5, aspect=.75, facet_kws=dict(sharex=False),
-)
+from os import listdir
+from os.path import isfile, join
+import re 
 
 
-total = H2evaluation1.append(H2evaluation2)
+## get all the files: 
+## we ran it in two batches. 
+with open("../data/evaluation/evaluation_metrics.pkl", "rb") as f:
+        eval1 = pickle.load(f) 
 
-H2plot = total.pivot(index='topics', columns='alpha', values='coherence')
-H2plot.plot()
+with open("../data/evaluation/H2_evaluation_metrics.pkl", "rb") as f:
+        eval2 = pickle.load(f)
 
-## need to run evaluation on the new shit..
+## combine the two: 
+eval = pd.concat([eval1, eval2])
+
+## correct data type for topics, eta, alpha: 
+eval[['topics', 'alpha', 'eta']] = eval[['topics', 'alpha', 'eta']].apply(pd.to_numeric) 
+
+## arun between 0-1: 
+eval = eval.apply(lambda x: ((x-min(x))/(max(x)-min(x))) if x.name == 'arun' else x)
+
+## long format for plotting: 
+eval_melt = pd.melt(eval, id_vars = ['hypothesis', 'condition', 'topics', 'alpha', 'eta'], value_vars = ['coherence_cv', 'cao_juan', 'arun'])
+
+## 1. H1_tread: 5-50, all combinations: 
+thread_melt = eval_melt[(eval_melt.hypothesis == "H1") & (eval_melt.condition == "thread") & (eval_melt.topics <= 50)]
+thread_melt
+
+# plotting
+g = sns.FacetGrid(thread_melt, col = "eta", row = "variable", hue = "alpha")
+g.map_dataframe(sns.lineplot, x = "topics" , y = "value")
+g.set_axis_labels("topics", "coherence")
+g.add_legend()
+
+# save figure: 
+g.savefig("../Figure/H1_thread.png")
+
+# 2. H1_thread vs. tree: 
+# make a call (based on this AND interpretability).
+H1_comparison = eval_melt[(eval_melt.hypothesis == "H1") & (eval_melt.alpha == 0.01) & (eval_melt.eta == 0.10)]
+g = sns.FacetGrid(H1_comparison, col = "variable", hue = "condition", sharey = False)
+g.map_dataframe(sns.lineplot, x = "topics" , y = "value")
+g.set_axis_labels("topics", "coherence")
+g.add_legend()
+
+# save figure
+g.savefig("../Figure/H1_comparison.png")
+
+# 3. H2_submissions for 5-100 (only b01/a001): 
+H2_sub = eval_melt[(eval_melt.hypothesis == "H2") & (eval_melt.alpha == 0.01) & (eval_melt.eta == 0.10)]
+plot = sns.lineplot(data = H2_sub, x = "topics", y = "value", hue = "variable")
+
+# save figure: 
+plot.figure.savefig("../Figure/H2_submissions.png")
+
+# 4. H2_submissions (5-50)
+H2_sub2 = eval_melt[(eval_melt.hypothesis == "H2") & (eval_melt.topics <= 50)]
+g = sns.FacetGrid(H2_sub2, col = "eta", row = "variable", hue = "alpha")
+g.map_dataframe(sns.lineplot, x = "topics" , y = "value")
+g.set_axis_labels("topics", "coherence")
+g.add_legend()
+
+g.savefig("../Figure/H2_grid.png")

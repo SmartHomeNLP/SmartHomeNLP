@@ -14,7 +14,7 @@ from multiprocessing import Process, freeze_support
 import threading
 from functions import LdaMulti_topics #the main model
 
-input_tuple = ("H2_submissions_b0.1_a0.01", "H2_submissions_corpus", "H2_submissions_dct")
+input_tuple = ("H2_submissions_t5-50", "H2_submissions_corpus", "H2_submissions_dct")
 
 ## main function: 
 def main(filename, corpus_name, dct_name): 
@@ -47,7 +47,7 @@ def main(filename, corpus_name, dct_name):
     models = LdaMulti_topics(dictionary=dct, 
                             corpus=corpus,
                             start = 5, 
-                            limit = 101, 
+                            limit = 51, 
                             step = 5, 
                             alpha = alpha, 
                             eta = eta)
