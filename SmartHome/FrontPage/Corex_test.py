@@ -2,6 +2,7 @@ import numpy as np
 import scipy.sparse as ss
 import matplotlib.pyplot as plt
 import pandas as pd
+import pickle 
 
 from corextopic import corextopic as ct
 from corextopic import vis_topic as vt # jupyter notebooks will complain matplotlib is being loaded twice
@@ -9,7 +10,31 @@ from corextopic import vis_topic as vt # jupyter notebooks will complain matplot
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import CountVectorizer
 
-data = pd.read_csv("../data/preprocessed/data_clean.csv")
+def load_pickle(name, query):
+    '''
+    Loads a pickle file given a query, which matches the
+    file structure.
+    ____
+    Examples:
+    ____
+    models = load_pickle("H2_submissions_b0.1_a0.01", query = "model")
+    corpus = load_pickle("H2_submissions_corpus", query = "corpus")
+    df = load_pickle("H2_submissions", query = "data")
+    '''
+    if query == "corpus":
+        with open(f"../data/modeling/{name}.pkl", "rb") as f: 
+            corpus = pickle.load(f)
+        return corpus
+    if query == "model":
+        with open(f"../data/models/{name}.pkl", "rb") as f: 
+            model = pickle.load(f)
+        return model
+    if query == "data":
+        with open(f"../data/clean/{name}.pkl", "rb") as f: 
+            df = pickle.load(f)
+        return df
+
+data = load_pickle("H2_submissions", "data")
 
 vectorizer = CountVectorizer(ngram_range=(1, 2), token_pattern=r'\b\w+\b', min_df=2, max_features=20000, binary=True)
 doc_word = vectorizer.fit_transform(data["clean_text"])
@@ -26,8 +51,8 @@ words = [word for ind,word in enumerate(words) if not word.isdigit()]
 doc_word.shape # n_docs x m_words
 
 
-# Train the CorEx topic model with 50 topics
-topic_model = ct.Corex(n_hidden=25, words=words, max_iter=200, verbose=False, seed=1)
+# Train the CorEx topic model with 30 topics
+topic_model = ct.Corex(n_hidden=30, words=words, max_iter=200, verbose=False, seed=1)
 topic_model.fit(doc_word, words=words);
 
 # Print all topics from the CorEx topic model
@@ -50,7 +75,7 @@ print(topic_model.tc)
 
 anchor_words = [["security", "data"], ["security", "door"], "privacy", "trust"]
 
-anchored_topic_model = ct.Corex(n_hidden=20, seed=2)
+anchored_topic_model = ct.Corex(n_hidden=30, seed=2)
 anchored_topic_model.fit(doc_word, words=words, anchors=anchor_words, anchor_strength=4);
 
 for n in range(len(anchor_words)):

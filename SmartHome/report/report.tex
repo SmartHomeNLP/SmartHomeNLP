@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{pdfpages}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{apacite}
+\usepackage{mathptmx}
+\usepackage{fancyhdr}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.5}
+
+\title{Neuro Linguistic Programming}
+\author{Mikkel Werling \\ Victor Møller Poulsen}
+\date{December 2020}
+
+\begin{document}
+    \maketitle
+    \section{Abstract}
+    \section{Introduction}
+    \section{Methods}
+    \begin{enumerate}
+        \item Thoughts on choosing "atomic units":\\
+        Tree was higher in coherence, while thread was higher in the measure from Arun. So we had to take a more qualitative dive. Here we found that tree had several categories that seemed random (3 random words categories). Thread had overlap across categories, but seemed to capture more specific conversations. These were mainly due to different companies that people used. Moreover, the trees were made by pasting the submission text, which gives the submission text a lot of weight in the topic models. Here we focus on the common denominators between the two. 
+        \item Topics and their distributions: \\
+        We followed the division of the topics proposed in the qualitative study. Overall, we find that comfort and lighting as well as control and connectivity are the central themes of posts on the subreddits. 
+    \end{enumerate}
+    \section{Results}
+    \section{Discussion}
+    \begin{enumerate}
+        \item Reddit as a "how-to" site:\\
+        From the topics extracted from the corpus, it seems like the subreddits are primarily used to ask questions concerning specific products and how to implement them. Importantly for H2, it is used to much less degree as a discussion forum (for instance regarding security).
+        \item Use of seeded topic models?:\\
+        We initially thought that seeded topic models would help us disentangle different senses of security. But it does not seem to be warranted - we do not find indications that security is used in the more abstract sense. However, security does come up in several different categories. Notably, it comes up in topics related to cameras, which could indicate worries about cameras surveying them or just interest in security cameras. To investigate this, we sample some of the most representative documents of the topics and investigate the tendency. NOTE: Right now this is placed in the bottom of "doc\_from\_topic.py", but could be in its own document. But the findings are very clear - people are worried about buying the right camera, not whether it is filming them. 
+    \end{enumerate}
+\end{document}
