@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  28 DEC 2020 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  29 DEC 2020 13:00
 entering extended mode
 **c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex
 (c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex
@@ -255,19 +255,23 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
  [1
 
-{C:/Users/Mikkel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.aux) ) 
+{C:/Users/Mikkel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 39.
+ ("C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1ptm.fd"
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [2] [3] [4] (c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.aux) ) 
 Here is how much of TeX's memory you used:
- 4025 strings out of 480934
- 60077 string characters out of 2899449
- 314642 words of memory out of 3000000
- 19832 multiletter control sequences out of 15000+200000
- 547356 words of font info for 51 fonts, out of 3000000 for 9000
+ 4053 strings out of 480934
+ 60506 string characters out of 2899449
+ 315642 words of memory out of 3000000
+ 19854 multiletter control sequences out of 15000+200000
+ 550403 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,6n,45p,884b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.pdf (2 pages, 31986 bytes).
+Output written on c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.pdf (4 pages, 37853 bytes).
 PDF statistics:
- 18 PDF objects out of 1000 (max. 8388607)
+ 24 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
