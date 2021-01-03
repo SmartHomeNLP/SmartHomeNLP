@@ -76,3 +76,4 @@ pyLDAvis.display(thread_pyLDA)
 ## then visualize tree 
 tree_pyLDA = pyLDAvis.gensim.prepare(tree, tree_corpus, tree_dct, sort_topics = False)
 pyLDAvis.display(tree_pyLDA)
+pyLDAvis.save_html(tree_pyLDA, "../Figure/pyLDAvis_tree.html")
