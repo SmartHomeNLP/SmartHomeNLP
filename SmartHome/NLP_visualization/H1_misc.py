@@ -37,27 +37,12 @@ tree = tree['a0.01_b0.1_k30']
 
 ##### withing thread, looking at the big topics ######
 ## get out list of topics that are in categories
-light_thread = label_subset(melt, ['comfort and lighting'], "thread30")
-control_thread = label_subset(melt, ['control and connectivity'], "thread30")
-security_thread = label_subset(melt, ['security'], "thread30")
+misc_tree = label_subset(melt, ['misc'], 'tree30')
 misc_thread = label_subset(melt, ['misc'], 'thread30')
 
-## plot those categories
-plot_images(thread, light_thread, "comfort & lighting", 3)
-plot_images(thread, control_thread, "control & connectivity", 3) #generally more company focused
-plot_images(thread, security_thread, "security", 2)
+plot_images(thread, misc_thread, "RQ1: Misc (thread)", 3)
+plot_images(tree, misc_tree, "RQ1: Misc (tree)", 3)
 
-##### across thread and tree - what is recurring? ######
-light_tree = label_subset(melt, ['comfort and lighting'], "tree30")
-control_tree = label_subset(melt, ['control and connectivity'], "tree30")
-
-plot_images(tree, light_tree, "comfort & lighting", 3)
-plot_images(tree, control_tree, "control & connectivity", 3)
-
-####### page through plots to find interesting subsets #######
-## some weird spacing, but less important
-## for our purposes here.. 
-## trying to find specific companies: 
-companies_thread = create_image_list(thread)
-
-
+## 
+control_tree = label_subset(melt, ['control and connectivity'], 'tree30')
+control_thread = label_subset(melt, ['control and connectivity'], 'thread30')
