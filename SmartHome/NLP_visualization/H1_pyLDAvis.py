@@ -15,15 +15,20 @@ import warnings
 from wordcloud import WordCloud
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-##### import functions #######
-from visualization_functions import * 
-
 ###### pyLDAvis (reproducing our way of partialling it up?)  ######
 ## read corpus and dictionary 
 thread_dct = pickle_load("H1_thread_dct", "modeling")
 thread_corpus = pickle_load("H1_thread_corpus", "modeling")
 tree_dct = pickle_load("H1_tree_dct", "modeling")
 tree_corpus = pickle_load("H1_thread_corpus", "modeling")
+
+## import models ##
+thread = pickle_load("H1_thread_models_b0.1_b1", "models")
+tree = pickle_load("H1_tree_models", "models")
+
+## select specific models screened prior ##
+thread = thread['a0.01_b0.1_k30']
+tree = tree['a0.01_b0.1_k30']
 
 #### next part takes some time ####
 ## first visualize thread 
