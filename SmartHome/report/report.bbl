@@ -1,0 +1,379 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Arun%
+, Suresh%
+, Madhavan%
+\BCBL {}\ \BBA {} Murthy%
+}{%
+Arun%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+arun2010finding}
+\APACinsertmetastar {%
+arun2010finding}%
+\begin{APACrefauthors}%
+Arun, R.%
+, Suresh, V.%
+, Madhavan, C\BPBI V.%
+\BCBL {}\ \BBA {} Murthy, M\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On finding the natural number of topics with latent
+  dirichlet allocation: Some observations} {On finding the natural number of
+  topics with latent dirichlet allocation: Some observations}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Pacific-Asia conference on knowledge discovery and data
+  mining} {Pacific-asia conference on knowledge discovery and data mining}\
+  (\BPGS\ 391--402).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Baumgartner%
+, Zannettou%
+, Keegan%
+, Squire%
+\BCBL {}\ \BBA {} Blackburn%
+}{%
+Baumgartner%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+baumgartner2020pushshift}
+\APACinsertmetastar {%
+baumgartner2020pushshift}%
+\begin{APACrefauthors}%
+Baumgartner, J.%
+, Zannettou, S.%
+, Keegan, B.%
+, Squire, M.%
+\BCBL {}\ \BBA {} Blackburn, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The pushshift reddit dataset} {The pushshift reddit
+  dataset}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the International AAAI Conference on Web
+  and Social Media} {Proceedings of the international aaai conference on web
+  and social media}\ (\BVOL~14, \BPGS\ 830--839).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Cao%
+, Xia%
+, Li%
+, Zhang%
+\BCBL {}\ \BBA {} Tang%
+}{%
+Cao%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+cao2009density}
+\APACinsertmetastar {%
+cao2009density}%
+\begin{APACrefauthors}%
+Cao, J.%
+, Xia, T.%
+, Li, J.%
+, Zhang, Y.%
+\BCBL {}\ \BBA {} Tang, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A density-based method for adaptive LDA model selection}
+  {A density-based method for adaptive lda model selection}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Neurocomputing}{72}{7-9}{1775--1781}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chang%
+, Gerrish%
+, Wang%
+, Boyd-Graber%
+\BCBL {}\ \BBA {} Blei%
+}{%
+Chang%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+chang2009reading}
+\APACinsertmetastar {%
+chang2009reading}%
+\begin{APACrefauthors}%
+Chang, J.%
+, Gerrish, S.%
+, Wang, C.%
+, Boyd-Graber, J.%
+\BCBL {}\ \BBA {} Blei, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Reading tea leaves: How humans interpret topic models}
+  {Reading tea leaves: How humans interpret topic models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Advances in neural information processing
+  systems}{22}{}{288--296}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Domingos%
+}{%
+Domingos%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+domingos2012few}
+\APACinsertmetastar {%
+domingos2012few}%
+\begin{APACrefauthors}%
+Domingos, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A few useful things to know about machine learning} {A
+  few useful things to know about machine learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Communications of the ACM}{55}{10}{78--87}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Honnibal%
+\ \BBA {} Montani%
+}{%
+Honnibal%
+\ \BBA {} Montani%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+spacy2}
+\APACinsertmetastar {%
+spacy2}%
+\begin{APACrefauthors}%
+Honnibal, M.%
+\BCBT {}\ \BBA {} Montani, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+\APACrefbtitle {{spaCy 2}: Natural language understanding with {B}loom
+  embeddings, convolutional neural networks and incremental parsing.} {{spaCy
+  2}: Natural language understanding with {B}loom embeddings, convolutional
+  neural networks and incremental parsing.}
+\newblock
+\APACrefnote{To appear}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hubert%
+, Carugati%
+, Brock%
+\BCBL {}\ \BBA {} Obel%
+}{%
+Hubert%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+hubert2020take}
+\APACinsertmetastar {%
+hubert2020take}%
+\begin{APACrefauthors}%
+Hubert, M.%
+, Carugati, A.%
+, Brock, C.%
+\BCBL {}\ \BBA {} Obel, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Take it Personally--The Role of Consumers’ Perceived
+  Value of Personalization on Cross-Category Use in a Smart Home Ecosystem}
+  {Take it personally--the role of consumers’ perceived value of
+  personalization on cross-category use in a smart home ecosystem}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 53rd Hawaii International Conference
+  on System Sciences.} {Proceedings of the 53rd hawaii international conference
+  on system sciences.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Loper%
+\ \BBA {} Bird%
+}{%
+Loper%
+\ \BBA {} Bird%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+loper2002nltk}
+\APACinsertmetastar {%
+loper2002nltk}%
+\begin{APACrefauthors}%
+Loper, E.%
+\BCBT {}\ \BBA {} Bird, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {NLTK: the natural language toolkit} {Nltk: the natural
+  language toolkit}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint cs/0205028}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Novak%
+\ \BBA {} Hoffman%
+}{%
+Novak%
+\ \BBA {} Hoffman%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+novak2019relationship}
+\APACinsertmetastar {%
+novak2019relationship}%
+\begin{APACrefauthors}%
+Novak, T\BPBI P.%
+\BCBT {}\ \BBA {} Hoffman, D\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Relationship journeys in the internet of things: a new
+  framework for understanding interactions between consumers and smart objects}
+  {Relationship journeys in the internet of things: a new framework for
+  understanding interactions between consumers and smart objects}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of the Academy of Marketing
+  Science}{47}{2}{216--237}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Perez%
+}{%
+Perez%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+perez_smart_2018}
+\APACinsertmetastar {%
+perez_smart_2018}%
+\begin{APACrefauthors}%
+Perez, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+\APACrefbtitle {Smart speakers hit critical mass in 2018.} {Smart speakers hit
+  critical mass in 2018.}
+\newblock
+\begin{APACrefURL} [{2021-01-03}]\url{https://tinyurl.com/ybvnq78q}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sievert%
+\ \BBA {} Shirley%
+}{%
+Sievert%
+\ \BBA {} Shirley%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+sievert2014ldavis}
+\APACinsertmetastar {%
+sievert2014ldavis}%
+\begin{APACrefauthors}%
+Sievert, C.%
+\BCBT {}\ \BBA {} Shirley, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {LDAvis: A method for visualizing and interpreting
+  topics} {Ldavis: A method for visualizing and interpreting topics}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the workshop on interactive language
+  learning, visualization, and interfaces} {Proceedings of the workshop on
+  interactive language learning, visualization, and interfaces}\ (\BPGS\
+  63--70).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Skowronski%
+}{%
+Skowronski%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+skowronski_identifying_2019}
+\APACinsertmetastar {%
+skowronski_identifying_2019}%
+\begin{APACrefauthors}%
+Skowronski, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{{\APACmonth{07}}}{}.
+\newblock
+\APACrefbtitle {Identifying trolls and bots on {Reddit} with machine learning
+  ({Part} 2).} {Identifying trolls and bots on {Reddit} with machine learning
+  ({Part} 2).}
+\newblock
+\begin{APACrefURL} [{2021-01-03}]\url{https://tinyurl.com/y7bojtax}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tabassum%
+\ \protect \BOthers {.}}{%
+Tabassum%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+tabassum2019investigating}
+\APACinsertmetastar {%
+tabassum2019investigating}%
+\begin{APACrefauthors}%
+Tabassum, M.%
+, Kosi{\'n}ski, T.%
+, Frik, A.%
+, Malkin, N.%
+, Wijesekera, P.%
+, Egelman, S.%
+\BCBL {}\ \BBA {} Lipford, H\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Investigating Users' Preferences and Expectations for
+  Always-Listening Voice Assistants} {Investigating users' preferences and
+  expectations for always-listening voice assistants}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Proceedings of the ACM on Interactive, Mobile, Wearable
+  and Ubiquitous Technologies}{3}{4}{1--23}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
