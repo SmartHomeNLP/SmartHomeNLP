@@ -194,6 +194,10 @@ def bot_clean(manual = False, done = False):
     problematic_accounts_comb.remove('[deleted]')
     print(f"total bots (excluding deleted): {len(problematic_accounts_comb)}")
 
+    ## save the problematic accounts from automatic screening
+    with open("automatic_bots.pkl", 'wb') as f:
+        pickle.dump(problematic_accounts, f)
+
     # remove the automatically generated problematic accounts: 
     comments = comments[~comments['author'].isin(problematic_accounts_comb)]
     submissions = submissions[~submissions['author'].isin(problematic_accounts_comb)]
@@ -230,13 +234,15 @@ def bot_clean(manual = False, done = False):
     ## remove bots from the original comments data & submissions: 
     clean_comments = comments[~comments['author'].isin(manual_bots)]
     clean_submissions = submissions[~submissions['author'].isin(manual_bots)]
-
+    
+    '''
     ## write the data 
     with open("../data/preprocessed/comments_nobots.pkl", 'wb') as com:
         pickle.dump(clean_comments, com)
     
     with open("../data/preprocessed/submissions_nobots.pkl", 'wb') as sub:
         pickle.dump(clean_submissions, sub)
+    '''
 
 ## CONCAT COMMENTS & SUBMISSIONS ##
 

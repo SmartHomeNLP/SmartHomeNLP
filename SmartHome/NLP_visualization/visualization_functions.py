@@ -101,7 +101,7 @@ def plot_images(model, topics, header, columns = 5):
     total_img = len(topics)
     rows = math.ceil(total_img/columns)
     fig, axs = plt.subplots(rows, columns, figsize=(5*columns, (5*rows)-2))
-    
+
     for i in range(rows):
         cols_left = min(total_img, columns)
         if total_img < columns:
@@ -110,7 +110,8 @@ def plot_images(model, topics, header, columns = 5):
         for j in range(cols_left):
                 axs[i,j].imshow(WordCloud(background_color = "white").fit_words(dict(model.show_topic(topics[(i*columns)+j], 50))))
                 axs[i,j].axis("off")
-                axs[i,j].set_title("Topic #" + str(topics[(i*columns)+j]), fontsize = 30)
+                axs[i,j].set_title("Topic #" + str(topics[(i*columns)+j] + 1), fontsize = 30)
         total_img -= columns
-    fig.tight_layout()
+    fig.tight_layout(rect=[0, 0.03, 1, 0.95])
     fig.suptitle(header, fontsize = 40)
+    return(fig)

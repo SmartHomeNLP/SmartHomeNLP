@@ -35,14 +35,12 @@ tree = pickle_load("H1_tree_models", "models")
 thread = thread['a0.01_b0.1_k30']
 tree = tree['a0.01_b0.1_k30']
 
-##### withing thread, looking at the big topics ######
-## get out list of topics that are in categories
+### looking at the misc category
 misc_tree = label_subset(melt, ['misc'], 'tree30')
 misc_thread = label_subset(melt, ['misc'], 'thread30')
 
-plot_images(thread, misc_thread, "RQ1: Misc (thread)", 3)
-plot_images(tree, misc_tree, "RQ1: Misc (tree)", 3)
+plt_misc_thread = plot_images(thread, misc_thread, "RQ1: Misc (thread)", 3)
+plt_misc_tree = plot_images(tree, misc_tree, "RQ1: Misc (tree)", 3)
 
-## 
-control_tree = label_subset(melt, ['control and connectivity'], 'tree30')
-control_thread = label_subset(melt, ['control and connectivity'], 'thread30')
+## save the figure
+plt_misc_tree.savefig('../Figure/tree_misc.png')
