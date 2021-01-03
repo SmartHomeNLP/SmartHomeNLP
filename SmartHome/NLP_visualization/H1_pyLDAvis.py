@@ -13,6 +13,7 @@ import pyLDAvis
 import pyLDAvis.gensim
 import warnings
 from wordcloud import WordCloud
+from visualization_functions import *
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 ###### pyLDAvis (reproducing our way of partialling it up?)  ######
