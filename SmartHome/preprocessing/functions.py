@@ -21,7 +21,8 @@ from nltk.stem import WordNetLemmatizer
 import html
 
 def timer(func): 
-    """Prints run-time""" 
+    """Wrapper function to use to print the run-time of 
+    another function""" 
     @functools.wraps(func)
 
     def wrapper_timer(*args, **kwargs): 
@@ -50,9 +51,8 @@ def timer(func):
 
 ## MERGE SUBMISSIONS ### 
 
-@timer
+@timer #using the previously defined wrapper
 def merge_submissions():
-    
     filenames = []
     for file in os.listdir("../data/raw"):
         if file.startswith("submissions"):

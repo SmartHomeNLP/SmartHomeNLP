@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1609243214 "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex" "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.pdf" "report" 1609243215
+["pdflatex"] 1609337428 "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex" "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.pdf" "report" 1609337429
   "C:/Users/Mikkel/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1584976365 9904387 0406f08e4bc387d63da27ba0913d94cc ""
   "C:/Users/Mikkel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1608305656 80769 2ec303ce397c887a4813d2fbf457fe4d ""
   "C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -59,13 +59,13 @@
   "C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/ts1ptm.fd" 1585253778 653 96f56dc5d1ef1fe1121f1cfeec70ee0c ""
   "C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/calc.sty" 1580644886 10216 5efd55f2010055e7b7875afd6a75be82 ""
   "C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.aux" 1609243215 1844 ad855cffd2c911f3e01e20614560535d ""
-  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex" 1609243213 4046 877120aedacfd56587ea912afc36c105 ""
-  "report.aux" 1609243215 1844 ad855cffd2c911f3e01e20614560535d "pdflatex"
-  "report.tex" 1609243213 4046 877120aedacfd56587ea912afc36c105 ""
+  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.aux" 1609337429 2515 2b7f7977649f0950163d337f7bd5c155 ""
+  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex" 1609337427 6242 553c742d05071a957956266b99e17758 ""
+  "report.aux" 1609337429 2515 2b7f7977649f0950163d337f7bd5c155 "pdflatex"
+  "report.tex" 1609337427 6242 553c742d05071a957956266b99e17758 ""
   (generated)
   "report.aux"
-  "report.log"
-  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.log"
   "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.pdf"
+  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.log"
   "report.pdf"
+  "report.log"
