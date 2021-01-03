@@ -18,8 +18,8 @@ from gensim.matutils import corpus2csc, Sparse2Corpus
 from tqdm import tqdm
 
 #change this: 
-filename = "H2_evaluation_metrics"
-complete = ["H2_submissions_t5-50.pkl"] #has to be a list..
+filename = "H1_tree_metrics_b0.01_b0.1"
+complete = ["H1_tree_models_b0.01_b0.1.pkl"] #has to be a list..
 
 def main(filename, complete = False): 
     

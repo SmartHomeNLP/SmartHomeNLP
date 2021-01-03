@@ -11,15 +11,21 @@ import re
 
 
 ## get all the files: 
-## we ran it in two batches. 
+## we ran it in several batches: 
 with open("../data/evaluation/evaluation_metrics.pkl", "rb") as f:
         eval1 = pickle.load(f) 
 
 with open("../data/evaluation/H2_evaluation_metrics.pkl", "rb") as f:
         eval2 = pickle.load(f)
 
+with open("../data/evaluation/H1_tree_eval_b1.0.pkl", "rb") as f:
+        eval3 = pickle.load(f)
+
+with open("../data/evaluation/H1_tree_metrics_b0.01_b0.1.pkl", "rb") as f: 
+        eval4 = pickle.load(f)
+
 ## combine the two: 
-eval = pd.concat([eval1, eval2])
+eval = pd.concat([eval1, eval2, eval3, eval4])
 
 ## correct data type for topics, eta, alpha: 
 eval[['topics', 'alpha', 'eta']] = eval[['topics', 'alpha', 'eta']].apply(pd.to_numeric) 
@@ -31,13 +37,15 @@ eval = eval.apply(lambda x: ((x-min(x))/(max(x)-min(x))) if x.name == 'arun' els
 eval_melt = pd.melt(eval, id_vars = ['hypothesis', 'condition', 'topics', 'alpha', 'eta'], value_vars = ['coherence_cv', 'cao_juan', 'arun'])
 
 ## 1. H1_tread: 5-50, all combinations: 
-thread_melt = eval_melt[(eval_melt.hypothesis == "H1") & (eval_melt.condition == "thread") & (eval_melt.topics <= 50)]
+thread_melt = eval_melt[(eval_melt.hypothesis == "H1") & (eval_melt.condition == "thread") & (eval_melt.topics <= 50)] # & (eval_melt.topics <= 50)
 thread_melt
 
 # plotting
 g = sns.FacetGrid(thread_melt, col = "eta", row = "variable", hue = "alpha")
 g.map_dataframe(sns.lineplot, x = "topics" , y = "value")
 g.set_axis_labels("topics", "coherence")
+g.set_title("just one please")
+g.fig.suptitle('THIS IS A TITLE, YOU BET')
 g.add_legend()
 
 # save figure: 

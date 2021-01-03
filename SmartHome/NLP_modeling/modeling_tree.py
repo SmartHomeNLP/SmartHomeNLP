@@ -13,8 +13,9 @@ import multiprocessing
 from multiprocessing import Process, freeze_support
 import threading
 from functions import LdaMulti_topics #the main model
+import timeit
 
-input_tuple = ("H1_tree_models", "H1_tree_corpus", "H1_tree_dct")
+input_tuple = ("H1_tree_models_b0.01_b0.1", "H1_tree_corpus", "H1_tree_dct")
 
 ## main function: 
 def main(filename, corpus_name, dct_name): 
@@ -47,7 +48,7 @@ def main(filename, corpus_name, dct_name):
     models = LdaMulti_topics(dictionary=dct, 
                             corpus=corpus,
                             start = 5, 
-                            limit = 101, 
+                            limit = 51, 
                             step = 5, 
                             alpha = alpha, 
                             eta = eta)
