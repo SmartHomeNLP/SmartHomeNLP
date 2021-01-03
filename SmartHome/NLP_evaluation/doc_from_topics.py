@@ -38,6 +38,10 @@ def load_pickle(name, query):
         with open(f"../data/clean/{name}.pkl", "rb") as f: 
             df = pickle.load(f)
         return df
+    if query == "topic_df":
+        with open(f"../data/modeling/topic_dfs/{name}.pkl", "rb") as f: 
+            df = pickle.load(f)
+        return df
 
 # Find the topic number with the highest 
 def dominant_topic(ldamodel, corpus, document, save_name = ""):
@@ -88,12 +92,6 @@ def topic_threshold(df, topic, threshold):
     have a topic_perc_contribution over a set threshold.
     '''
     return df[(df["Dominant_Topic"] == topic) & (df["Topic_Perc_Contribution"] > threshold)].sort_values("Topic_Perc_Contribution", ascending = False)
-
-## For H1: Run with both tree and thread (30 & 100)
-## For H2: 10, 30, 50
-
-### Naming scheme would be nice to establish previously.
-### Hyp_subdivision_beta_alpha_topics.pkl
 
 def query_topic(data, sub_size, query, topic = False):
     '''

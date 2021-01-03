@@ -15,7 +15,7 @@ import threading
 from functions import LdaMulti_topics #the main model
 import timeit
 
-input_tuple = ("H1_tree_models_b0.01_b0.1", "H1_tree_corpus", "H1_tree_dct")
+input_tuple = ("H1_tree_models_b1.0", "H1_tree_corpus", "H1_tree_dct")
 
 ## main function: 
 def main(filename, corpus_name, dct_name): 
