@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex report"] 1609754736 "report.aux" "report.bbl" "report" 1609754739
+["bibtex report"] 1609760531 "report.aux" "report.bbl" "report" 1609760534
   "C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/apacite/apacite.bst" 1374949128 146156 9d7b79dbf9d91133318126032cff8c27 ""
   "cite.bib" 1609712024 6719 06d1b7bbb45a96794a6fea54fd06ec98 ""
-  "report.aux" 1609754738 10401 dad2c6a124597476bbc2f18f3e074868 "pdflatex"
+  "report.aux" 1609760534 10427 4b66f828e8f67bbc5eefc63411cb3fc9 "pdflatex"
   (generated)
-  "report.blg"
   "report.bbl"
-["pdflatex"] 1609754736 "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex" "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.pdf" "report" 1609754739
+  "report.blg"
+["pdflatex"] 1609760531 "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex" "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.pdf" "report" 1609760534
   "../Figure/H1_thread_red.png" 1609752467 64574 666e86e29037f2018dbf08d3fa047a44 ""
   "../Figure/H1_tree_red.png" 1609752448 56790 f97110b56898afae436cd85e3cf789f4 ""
   "../Figure/H2_submissions_red.png" 1609752433 63428 309f8b3ffae2ffc1517de08e47db2e43 ""
@@ -121,16 +121,16 @@
   "C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/calc.sty" 1580644886 10216 5efd55f2010055e7b7875afd6a75be82 ""
   "C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.aux" 1609754738 10401 dad2c6a124597476bbc2f18f3e074868 ""
-  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex" 1609754732 41820 30e39f013942e1cc86c69973e1ca4940 ""
-  "report.aux" 1609754738 10401 dad2c6a124597476bbc2f18f3e074868 "pdflatex"
-  "report.bbl" 1609754736 9593 d91a989f4dc87c9117074cec8cc7e35d "bibtex report"
-  "report.out" 1609754738 1900 dae1b94c984592dc6a9175557006477d "pdflatex"
-  "report.tex" 1609754732 41820 30e39f013942e1cc86c69973e1ca4940 ""
+  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.aux" 1609760534 10427 4b66f828e8f67bbc5eefc63411cb3fc9 ""
+  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex" 1609760527 41816 9d9c704939b6ffd6032a9abda503804f ""
+  "report.aux" 1609760534 10427 4b66f828e8f67bbc5eefc63411cb3fc9 "pdflatex"
+  "report.bbl" 1609760531 9593 d91a989f4dc87c9117074cec8cc7e35d "bibtex report"
+  "report.out" 1609760534 1899 2b9bcadabd8f1a2767c6944a7f261c74 "pdflatex"
+  "report.tex" 1609760527 41816 9d9c704939b6ffd6032a9abda503804f ""
   (generated)
-  "report.out"
-  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.log"
-  "report.log"
-  "report.aux"
   "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.pdf"
   "report.pdf"
+  "report.out"
+  "report.aux"
+  "c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.log"
+  "report.log"
