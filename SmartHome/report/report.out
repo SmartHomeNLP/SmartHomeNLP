@@ -1,26 +1,25 @@
 \BOOKMARK [1][-]{section.1}{Abstract}{}% 1
 \BOOKMARK [1][-]{section.2}{Introduction}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Smarthome - what's the buzz?}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Building on Hubert et al., \(2020\)}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Additions to the framework}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Why Topic Modelling?}{section.2}% 6
-\BOOKMARK [1][-]{section.3}{Data}{}% 7
-\BOOKMARK [2][-]{subsection.3.1}{Preprocessing}{section.3}% 8
+\BOOKMARK [2][-]{subsection.2.1}{Smarthome - what's the buzz? \(Victor M\370ller Poulsen\)}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Building on Hubert et al., \(2020\) \(Mikkel Werling\)}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Additions to the framework \(Victor M\370ller Poulsen\)}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Why Topic Modelling? \(Mikkel Werling\)}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Data \(Victor M\370ller Poulsen\)}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Preprocessing \(Mikkel Werling\)}{section.3}% 8
 \BOOKMARK [1][-]{section.4}{Methods}{}% 9
-\BOOKMARK [2][-]{subsection.4.1}{Topic Modelling}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.2}{Different Metrics to evaluate Quality of Topics}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.3}{Labeling based on Hubert et al. \(2020\)}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.4}{Investigating "privacy", "trust" and "security"}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.1}{Topic Modelling \(Victor M\370ller Poulsen\)}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Different Metrics to evaluate Quality of Topics \(Mikkel Werling\)}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.3}{Labeling based on Hubert et al. \(2020\) \(Victor M\370ller Poulsen\)}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.4}{Investigating "privacy", "trust" and "security" \(Mikkel Werling\)}{section.4}% 13
 \BOOKMARK [1][-]{section.5}{Results}{}% 14
-\BOOKMARK [2][-]{subsection.5.1}{RQ1}{section.5}% 15
-\BOOKMARK [2][-]{subsection.5.2}{RQ2}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.1}{RQ1 \(Victor M\370ller Poulsen\)}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.2}{RQ2 \(Mikkel Werling\)}{section.5}% 16
 \BOOKMARK [1][-]{section.6}{Discussion}{}% 17
-\BOOKMARK [2][-]{subsection.6.1}{RQ2}{section.6}% 18
-\BOOKMARK [2][-]{subsection.6.2}{RQ1}{section.6}% 19
-\BOOKMARK [2][-]{subsection.6.3}{The Forum}{section.6}% 20
-\BOOKMARK [1][-]{section.7}{Future work}{}% 21
-\BOOKMARK [2][-]{subsection.7.1}{Reddit as a practical forum}{section.7}% 22
-\BOOKMARK [2][-]{subsection.7.2}{Optimizing}{section.7}% 23
-\BOOKMARK [1][-]{section.8}{Conclusion}{}% 24
-\BOOKMARK [1][-]{section.9}{Appendix}{}% 25
-\BOOKMARK [1][-]{section*.10}{References}{}% 26
+\BOOKMARK [2][-]{subsection.6.1}{RQ2 \(Victor M\370ller Poulsen\)}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.2}{The Forum \(Mikkel Werling\)}{section.6}% 19
+\BOOKMARK [1][-]{section.7}{Future work}{}% 20
+\BOOKMARK [2][-]{subsection.7.1}{Reddit as a practical forum \(Victor M\370ller Poulsen\)}{section.7}% 21
+\BOOKMARK [2][-]{subsection.7.2}{Optimizing \(Mikkel Werling\)}{section.7}% 22
+\BOOKMARK [1][-]{section.8}{Conclusion}{}% 23
+\BOOKMARK [1][-]{section.9}{Appendix}{}% 24
+\BOOKMARK [1][-]{section*.12}{References}{}% 25
