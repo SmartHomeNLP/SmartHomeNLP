@@ -225,6 +225,9 @@ INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptm
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptmb7t.vf
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\zptmcm7y.vf
+INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\symbol\psyr.tfm
+INPUT C:\Users\Mikkel\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT ..\Figure\atomic_units.jpg
 INPUT ..\Figure\atomic_units.jpg
 INPUT ..\Figure\atomic_units.jpg
@@ -232,30 +235,12 @@ INPUT ..\Figure\atomic_units.jpg
 INPUT ..\Figure\atomic_units.jpg
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptmr7t.vf
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\zptmcm7y.vf
-INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\symbol\psyr.tfm
-INPUT C:\Users\Mikkel\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\zptmcm7t.vf
 INPUT ..\Figure\H1_thread_red.png
 INPUT ..\Figure\H1_thread_red.png
 INPUT ..\Figure\H1_thread_red.png
 INPUT ..\Figure\H1_thread_red.png
 INPUT ..\Figure\H1_thread_red.png
-INPUT ..\Figure\Topic_Prevalence.png
-INPUT ..\Figure\Topic_Prevalence.png
-INPUT ..\Figure\Topic_Prevalence.png
-INPUT ..\Figure\Topic_Prevalence.png
-INPUT ..\Figure\Topic_Prevalence.png
-INPUT ..\Figure\pyLDAvis_edit.jpg
-INPUT ..\Figure\pyLDAvis_edit.jpg
-INPUT ..\Figure\pyLDAvis_edit.jpg
-INPUT ..\Figure\pyLDAvis_edit.jpg
-INPUT ..\Figure\pyLDAvis_edit.jpg
-INPUT ..\Figure\tree_misc_red.png
-INPUT ..\Figure\tree_misc_red.png
-INPUT ..\Figure\tree_misc_red.png
-INPUT ..\Figure\tree_misc_red.png
-INPUT ..\Figure\tree_misc_red.png
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\zptmcm7t.tfm
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\zptmcm7t.tfm
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\zptmcm7m.tfm
@@ -274,6 +259,21 @@ INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\pt
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\zptmcm7t.vf
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT ..\Figure\Topic_Prevalence.png
+INPUT ..\Figure\Topic_Prevalence.png
+INPUT ..\Figure\Topic_Prevalence.png
+INPUT ..\Figure\Topic_Prevalence.png
+INPUT ..\Figure\Topic_Prevalence.png
+INPUT ..\Figure\pyLDAvis_edit.jpg
+INPUT ..\Figure\pyLDAvis_edit.jpg
+INPUT ..\Figure\pyLDAvis_edit.jpg
+INPUT ..\Figure\pyLDAvis_edit.jpg
+INPUT ..\Figure\pyLDAvis_edit.jpg
+INPUT ..\Figure\tree_misc_red.png
+INPUT ..\Figure\tree_misc_red.png
+INPUT ..\Figure\tree_misc_red.png
+INPUT ..\Figure\tree_misc_red.png
+INPUT ..\Figure\tree_misc_red.png
 INPUT ..\Figure\H2_topic_weight_prelim.png
 INPUT ..\Figure\H2_topic_weight_prelim.png
 INPUT ..\Figure\H2_topic_weight_prelim.png
