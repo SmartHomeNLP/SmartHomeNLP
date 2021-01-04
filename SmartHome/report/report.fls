@@ -252,6 +252,7 @@ INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\zp
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb7t.tfm
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmri7t.tfm
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptmri7t.vf
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\zptmcm7m.vf
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\psyro.tfm
 INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi10.tfm
@@ -279,19 +280,18 @@ INPUT ..\Figure\H2_topic_weight_prelim.png
 INPUT ..\Figure\H2_topic_weight_prelim.png
 INPUT ..\Figure\H2_topic_weight_prelim.png
 INPUT ..\Figure\H2_topic_weight_prelim.png
-INPUT ..\Figure\H1_tree_red.png
-INPUT ..\Figure\H1_tree_red.png
-INPUT ..\Figure\H1_tree_red.png
-INPUT ..\Figure\H1_tree_red.png
-INPUT ..\Figure\H1_tree_red.png
-INPUT ..\Figure\H2_submissions_red.png
-INPUT ..\Figure\H2_submissions_red.png
-INPUT ..\Figure\H2_submissions_red.png
-INPUT ..\Figure\H2_submissions_red.png
-INPUT ..\Figure\H2_submissions_red.png
 INPUT c:\Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.bbl
 INPUT c:\Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.bbl
-INPUT C:\Users\Mikkel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptmri7t.vf
+INPUT ..\Figure\H1_tree_red.png
+INPUT ..\Figure\H1_tree_red.png
+INPUT ..\Figure\H1_tree_red.png
+INPUT ..\Figure\H1_tree_red.png
+INPUT ..\Figure\H1_tree_red.png
+INPUT ..\Figure\H2_submissions_red.png
+INPUT ..\Figure\H2_submissions_red.png
+INPUT ..\Figure\H2_submissions_red.png
+INPUT ..\Figure\H2_submissions_red.png
+INPUT ..\Figure\H2_submissions_red.png
 INPUT c:\Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.aux
 INPUT c:\Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.out
 INPUT c:\Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.out
