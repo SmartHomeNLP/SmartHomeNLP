@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  4 JAN 2021 10:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  4 JAN 2021 11:05
 entering extended mode
 **c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex
 (c:/Users/Mikkel/Documents/UNI/masters/SmartHome/SmartHomeNLP/SmartHome/report/report.tex
@@ -450,11 +450,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 35.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -465,94 +465,95 @@ This may cause the page layout to be inconsistent, however.
 [1{C:/Users/Mikkel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ] [2] [3] [4]
-<../Figure/cao_juan.PNG, id=170, 819.8128pt x 440.39531pt>
+<../Figure/cao_juan.PNG, id=166, 819.8128pt x 440.39531pt>
 File: ../Figure/cao_juan.PNG Graphic file (type png)
 <use ../Figure/cao_juan.PNG>
-Package pdftex.def Info: ../Figure/cao_juan.PNG  used on input line 70.
-(pdftex.def)             Requested size: 327.91931pt x 176.155pt.
+Package pdftex.def Info: ../Figure/cao_juan.PNG  used on input line 68.
+(pdftex.def)             Requested size: 345.0pt x 185.33435pt.
 
-Overfull \hbox (0.38695pt too wide) in paragraph at lines 81--82
+Overfull \hbox (0.38695pt too wide) in paragraph at lines 79--80
 \OT1/ptm/m/n/10 We used Pushshift's Red-dit dataset [][]Baumgartner, Zan-net-tou, Kee-gan, Squire, & Black-
  []
 
 [5 <../Figure/cao_juan.PNG>] [6]
-<../Figure/atomic_units.jpg, id=199, 722.7pt x 257.763pt>
+<../Figure/atomic_units.jpg, id=196, 508.7808pt x 168.63pt>
 File: ../Figure/atomic_units.jpg Graphic file (type jpg)
 <use ../Figure/atomic_units.jpg>
-Package pdftex.def Info: ../Figure/atomic_units.jpg  used on input line 93.
-(pdftex.def)             Requested size: 325.21199pt x 115.99228pt.
- [7] [8 <../Figure/atomic_units.jpg>] [9]
-<../Figure/H1_thread_red.png, id=247, 717.68124pt x 654.445pt>
+Package pdftex.def Info: ../Figure/atomic_units.jpg  used on input line 91.
+(pdftex.def)             Requested size: 345.0pt x 114.35295pt.
+ [7 <../Figure/atomic_units.jpg>] [8] [9]
+<../Figure/H1_thread_red.png, id=243, 717.68124pt x 654.445pt>
 File: ../Figure/H1_thread_red.png Graphic file (type png)
 <use ../Figure/H1_thread_red.png>
-Package pdftex.def Info: ../Figure/H1_thread_red.png  used on input line 123.
-(pdftex.def)             Requested size: 287.06741pt x 261.77336pt.
+Package pdftex.def Info: ../Figure/H1_thread_red.png  used on input line 121.
+(pdftex.def)             Requested size: 345.0pt x 314.60936pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 127.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 127.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
  [10] [11 <../Figure/H1_thread_red.png>] [12]
-<../Figure/Topic_Prevalence.png, id=275, 505.89pt x 505.89pt>
+<../Figure/Topic_Prevalence.png, id=271, 505.89pt x 505.89pt>
 File: ../Figure/Topic_Prevalence.png Graphic file (type png)
 <use ../Figure/Topic_Prevalence.png>
-Package pdftex.def Info: ../Figure/Topic_Prevalence.png  used on input line 145.
-(pdftex.def)             Requested size: 252.94437pt x 252.94437pt.
+Package pdftex.def Info: ../Figure/Topic_Prevalence.png  used on input line 143.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
  [13]
-<../Figure/pyLDAvis_edit.jpg, id=285, 740.7675pt x 903.375pt>
+<../Figure/pyLDAvis_edit.jpg, id=281, 740.7675pt x 903.375pt>
 File: ../Figure/pyLDAvis_edit.jpg Graphic file (type jpg)
 <use ../Figure/pyLDAvis_edit.jpg>
-Package pdftex.def Info: ../Figure/pyLDAvis_edit.jpg  used on input line 157.
-(pdftex.def)             Requested size: 296.30174pt x 361.3436pt.
+Package pdftex.def Info: ../Figure/pyLDAvis_edit.jpg  used on input line 155.
+(pdftex.def)             Requested size: 345.0pt x 420.74048pt.
  [14 <../Figure/Topic_Prevalence.png>] [15 <../Figure/pyLDAvis_edit.jpg>]
-<../Figure/tree_misc_red.png, id=300, 1084.05pt x 578.16pt>
+<../Figure/tree_misc_red.png, id=296, 1084.05pt x 578.16pt>
 File: ../Figure/tree_misc_red.png Graphic file (type png)
 <use ../Figure/tree_misc_red.png>
-Package pdftex.def Info: ../Figure/tree_misc_red.png  used on input line 169.
-(pdftex.def)             Requested size: 325.21751pt x 173.44933pt.
+Package pdftex.def Info: ../Figure/tree_misc_red.png  used on input line 167.
+(pdftex.def)             Requested size: 345.0pt x 184.00044pt.
  [16 <../Figure/tree_misc_red.png>]
-<../Figure/H2_topic_weight_prelim.png, id=307, 1084.05pt x 722.7pt>
+<../Figure/H2_topic_weight_prelim.png, id=303, 1084.05pt x 722.7pt>
 File: ../Figure/H2_topic_weight_prelim.png Graphic file (type png)
 <use ../Figure/H2_topic_weight_prelim.png>
-Package pdftex.def Info: ../Figure/H2_topic_weight_prelim.png  used on input line 186.
-(pdftex.def)             Requested size: 325.21751pt x 216.81166pt.
- [17 <../Figure/H2_topic_weight_prelim.png>] [18] [19] [20] [21]
-<../Figure/H1_tree_red.png, id=346, 717.68124pt x 654.445pt>
+Package pdftex.def Info: ../Figure/H2_topic_weight_prelim.png  used on input line 184.
+(pdftex.def)             Requested size: 345.0pt x 230.00055pt.
+ [17 <../Figure/H2_topic_weight_prelim.png>] [18] [19] [20]
+<../Figure/H1_tree_red.png, id=339, 717.68124pt x 654.445pt>
 File: ../Figure/H1_tree_red.png Graphic file (type png)
 <use ../Figure/H1_tree_red.png>
-Package pdftex.def Info: ../Figure/H1_tree_red.png  used on input line 230.
-(pdftex.def)             Requested size: 287.06741pt x 261.77336pt.
-<../Figure/H2_submissions_red.png, id=347, 717.68124pt x 654.445pt>
+Package pdftex.def Info: ../Figure/H1_tree_red.png  used on input line 222.
+(pdftex.def)             Requested size: 345.0pt x 314.60936pt.
+ [21]
+<../Figure/H2_submissions_red.png, id=344, 717.68124pt x 654.445pt>
 File: ../Figure/H2_submissions_red.png Graphic file (type png)
 <use ../Figure/H2_submissions_red.png>
-Package pdftex.def Info: ../Figure/H2_submissions_red.png  used on input line 239.
-(pdftex.def)             Requested size: 287.06741pt x 261.77336pt.
- [22 <../Figure/H1_tree_red.png>] (c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.bbl [23 <../Figure/H2_submissions_red.png>])
+Package pdftex.def Info: ../Figure/H2_submissions_red.png  used on input line 231.
+(pdftex.def)             Requested size: 345.0pt x 314.60936pt.
+ [22 <../Figure/H1_tree_red.png>] [23 <../Figure/H2_submissions_red.png>] [24] (c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.bbl [25])
 
 Package caption Warning: Unused \captionsetup[ContinuedFloat] on input line 10.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
-[24]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
+[26]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
  (c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 279.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 8FF3619D5F598D66F222CF1B930D70AF;1569.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
+(rerunfilecheck)             Checksum: DAE1B94C984592DC6A9175557006477D;1900.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 279.
  ) 
 Here is how much of TeX's memory you used:
- 9715 strings out of 480934
- 152846 string characters out of 2899449
- 435835 words of memory out of 3000000
- 25297 multiletter control sequences out of 15000+200000
+ 9737 strings out of 480934
+ 152995 string characters out of 2899449
+ 438835 words of memory out of 3000000
+ 25296 multiletter control sequences out of 15000+200000
  572088 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,45p,1747b,480s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,12n,45p,1747b,474s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Mikkel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.pdf (24 pages, 1183459 bytes).
+Output written on c:/Users\Mikkel\Documents\UNI\masters\SmartHome\SmartHomeNLP\SmartHome\report\report.pdf (26 pages, 1177240 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
- 254 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 443 PDF objects out of 1000 (max. 8388607)
+ 96 named destinations out of 1000 (max. 500000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 
