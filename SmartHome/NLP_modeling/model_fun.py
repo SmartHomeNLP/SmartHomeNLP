@@ -66,7 +66,7 @@ def timer(func):
 def corpus_dct_gen(names = [], done = False): 
 
     if done: 
-        print("skipped bot cleaning")
+        print("skipped corpus and dictionary generation")
         return(None)
 
     for i in names: 

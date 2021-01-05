@@ -9,19 +9,19 @@ merge_comments()
 
 ## clean bots 
 ## use manual = True the first time. 
-bot_clean(manual = False, done = True) 
+bot_clean(manual = True, done = False) 
 
 ## concatenate data
-concat_data(done = True) ## important to keep this name
+concat_data(done = False) ## important to keep this name
 
 ## smaller cleaning tasks
-small_cleaning(done = True)
+small_cleaning(done = False)
 
 ## more cleaning tasks 
-clean_comment(done = True)
+clean_comment(done = False)
 
 ## specific cleaning for different purposes: 
 #  get accepts: ['thread', 'tree'] as arguments. 
-H1_preprocess(get = ['submission'], done = False) 
+gen_subsets(get = ['submission', "tree", "thread"], done = False) 
 
 ## you are done! :) 
