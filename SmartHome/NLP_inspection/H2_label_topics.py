@@ -14,6 +14,8 @@ import pyLDAvis.gensim
 import warnings
 from wordcloud import WordCloud
 
+from inspection_fun import *
+
 ## H1 (thread & tree)
 
 # load models: 
