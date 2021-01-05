@@ -75,7 +75,13 @@ a{value}_b{value}_k{value}, where $a = \alpha$, $b = \beta$ and
 $k =$ number of topics. 
 
 5. NLP evaluation: All evaluation of LDA models happens inside the folder "NLP_evaluation". 
-The 
+
+5.1. Evaluation metrics "c_v coherence" from Gensim as well "[Arun et al., (2010)](https://link.springer.com/chapter/10.1007/978-3-642-13657-3_43)"
+and "[Cao et al., (2009)](https://www.sciencedirect.com/science/article/pii/S092523120800372X?casa_token=pgLkNhzwqGoAAAAA:G51AiUtCIWm8Xy0WvEtws_ckwCS0Gi8m-66YHJ5kvAxTVYQsNBz97Rdsd85A-Ot_5kC7mD1Hwtg)" are generated from "gen_evaluation.py". 
+
+5.2. 
+
+
 
 ## Getting Started
 
