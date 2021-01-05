@@ -12,7 +12,7 @@ from gensim.models import LdaModel, LdaMulticore
 import multiprocessing
 from multiprocessing import Process, freeze_support
 import threading
-from functions import LdaMulti_topics #the main model
+from model_fun import LdaMulti_topics #the main model
 import timeit
 
 input_tuple = ("H1_tree_models_b1.0", "H1_tree_corpus", "H1_tree_dct")

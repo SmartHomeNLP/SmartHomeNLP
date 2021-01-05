@@ -453,7 +453,7 @@ def clean_comment(done = False, del_tags = ['NUM', 'PRON', 'ADV', 'DET', 'AUX', 
 
 ## preprocessing for specific purposes: 
 @timer
-def H1_preprocess(get = [], done = False): 
+def gen_subsets(get = [], done = False): 
 
     if done: 
         print("skipping specific preprocessing")
@@ -471,7 +471,7 @@ def H1_preprocess(get = [], done = False):
             subset = data[data["thread"] == i]
             subset_clean = subset["clean_text"].values
             subset_org = subset["text"].values
-            subset_clean = [str(x) for x in subset_clean] #getting an error because of a number????????? Why is this not removed?7
+            subset_clean = [str(x) for x in subset_clean] #getting an error because of a number????????? Why is this not removed?
             subset_org = [str(x) for x in subset_org]
             text_clean = " ".join(subset_clean)
             text_org = " ".join(subset_org)
