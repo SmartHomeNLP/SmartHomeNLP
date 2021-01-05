@@ -1,7 +1,5 @@
 '''
-VMP: just trying to process a few files as a test. 
-should be made cleaner.
-All of the newer files are zst.
+VMP: based on code by 
 '''
 
 import os
@@ -90,9 +88,9 @@ def read_zst(name):
     submissions.to_csv('../../data/raw/submissions{}.csv'.format(name_csv), index=False) ## we want it in data.
     print('-'*40)
 
-## pathing: right now on external (& windows..)
-path = "F:\\reddit_submissions" ## just for now.. 
-zst_list = [path+"\\"+i for i in os.listdir(path) if i.startswith('RS')] ## pretty stupid for now..
+## set path to where your data is
+path = "F:\\reddit_submissions" ## 
+zst_list = [path+"\\"+i for i in os.listdir(path) if i.startswith('RS')]
 
 ## running all the stuff at once. 
 with concurrent.futures.ThreadPoolExecutor() as executor:
