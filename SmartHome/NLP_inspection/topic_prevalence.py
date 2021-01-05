@@ -27,7 +27,7 @@ with open(f"../data/evaluation/H1_labels.pkl", "rb") as f:
 
 with open(f"../data/evaluation/H2_labels.pkl", "rb") as f: 
             labels_sub = pickle.load(f)
-            
+
 labels_sub = labels_sub["sub30_tags"]
 ### Finding the relevant item from the dictionary
 labels_tree = labels["tree30"]
@@ -71,35 +71,3 @@ for i, ele in enumerate([tree_df, thread_df, sub_df]):
     ax[i].set_title(labels_plot[i])
 fig.tight_layout()
 fig.savefig("../Figure/Topic_Prevalence.png")
-
-# ### TRYING TO GET SOME PLOTTING OF DIM REDUCTION GOING 
-
-# from sklearn.decomposition import TruncatedSVD
-# from sklearn.feature_extraction.text import CountVectorizer
-# import scipy.sparse as ss
-
-# org_data = load_pickle("H1_tree", "data")
-# topic_df["clean_text"] = org_data["clean_text"].values
-
-# vectorizer = CountVectorizer(ngram_range=(1, 2), token_pattern=r'\b\w+\b', min_df=2, max_features=20000, binary=True)
-# doc_word = vectorizer.fit_transform(topic_df["clean_text"])
-# doc_word = ss.csr_matrix(doc_word)
-
-# svd = TruncatedSVD(n_components=2, random_state=42)
-# data = svd.fit_transform(doc_word) 
-# topic_df["dim_1"] = data[:,0]
-# topic_df["dim_2"] = data[:,1]
-
-# import seaborn as sns
-
-# len(set(labels_tree))
-
-# plt.figure(figsize=(16,10))
-# sns.scatterplot(
-#     x="dim_1", y="dim_2",
-#     hue="Topic_Label",
-#     palette=sns.color_palette("hls", len(set(labels_tree))),
-#     data=topic_df.loc[:],
-#     legend="full",
-#     alpha=0.3
-# )
