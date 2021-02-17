@@ -14,7 +14,7 @@ import pyLDAvis.gensim
 import warnings
 from wordcloud import WordCloud
 
-from evaluation_functions import *
+from inspection_fun import *
 
 # load models:
 H1_tree = pickle_load("H1_tree_models", "models") 
